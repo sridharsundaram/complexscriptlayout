@@ -1,0 +1,98 @@
+libhb_old_la-harfbuzz-gpos.lo .libs/libhb_old_la-harfbuzz-gpos.o:  \
+ harfbuzz-gpos.c harfbuzz-impl.h harfbuzz-global.h /usr/include/stdlib.h \
+  /usr/include/machine/ieeefp.h /usr/include/_ansi.h \
+  /usr/include/newlib.h /usr/include/sys/config.h \
+  /usr/include/sys/features.h /usr/include/cygwin/config.h \
+  /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h \
+  /usr/include/sys/reent.h /usr/include/_ansi.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/machine/_default_types.h \
+  /usr/include/sys/lock.h /usr/include/machine/stdlib.h \
+  /usr/include/alloca.h /usr/include/cygwin/stdlib.h \
+  /usr/include/cygwin/wait.h /usr/include/string.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/string.h \
+  harfbuzz-gpos-private.h harfbuzz-stream-private.h harfbuzz-stream.h \
+  harfbuzz-gpos.h harfbuzz-gdef.h harfbuzz-open.h harfbuzz-buffer.h \
+  harfbuzz-open-private.h harfbuzz-gsub-private.h harfbuzz-gsub.h \
+  harfbuzz-gdef-private.h harfbuzz-buffer-private.h harfbuzz-shaper.h \
+  harfbuzz-external.h ../../src/hb-unicode.h ../../src/hb-common.h \
+  /usr/include/stdint.h
+
+harfbuzz-impl.h:
+
+harfbuzz-global.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/machine/ieeefp.h:
+
+/usr/include/_ansi.h:
+
+/usr/include/newlib.h:
+
+/usr/include/sys/config.h:
+
+/usr/include/sys/features.h:
+
+/usr/include/cygwin/config.h:
+
+/usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h:
+
+/usr/include/sys/reent.h:
+
+/usr/include/_ansi.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/machine/_default_types.h:
+
+/usr/include/sys/lock.h:
+
+/usr/include/machine/stdlib.h:
+
+/usr/include/alloca.h:
+
+/usr/include/cygwin/stdlib.h:
+
+/usr/include/cygwin/wait.h:
+
+/usr/include/string.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/string.h:
+
+harfbuzz-gpos-private.h:
+
+harfbuzz-stream-private.h:
+
+harfbuzz-stream.h:
+
+harfbuzz-gpos.h:
+
+harfbuzz-gdef.h:
+
+harfbuzz-open.h:
+
+harfbuzz-buffer.h:
+
+harfbuzz-open-private.h:
+
+harfbuzz-gsub-private.h:
+
+harfbuzz-gsub.h:
+
+harfbuzz-gdef-private.h:
+
+harfbuzz-buffer-private.h:
+
+harfbuzz-shaper.h:
+
+harfbuzz-external.h:
+
+../../src/hb-unicode.h:
+
+../../src/hb-common.h:
+
+/usr/include/stdint.h:

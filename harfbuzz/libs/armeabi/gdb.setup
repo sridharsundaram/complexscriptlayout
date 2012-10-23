@@ -1,0 +1,2 @@
+set solib-search-path ./obj/local/armeabi
+directory C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include jni/freetype/include jni/harfbuzz/src C:/Users/sridhar/android-ndk-r7b/sources/cxx-stl/system/include jni/freetype/builds jni/harfbuzz/../freetype/include

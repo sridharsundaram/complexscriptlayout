@@ -1,0 +1,11 @@
+prefix=/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: freetype2
+Description: Font to bitmap conversion library
+Version: 2.4.6
+
+Libs: -L${libdir} -lfreetype
+Cflags: -I${includedir}/freetype -I${includedir}

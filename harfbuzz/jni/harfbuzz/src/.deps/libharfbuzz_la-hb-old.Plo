@@ -1,0 +1,198 @@
+libharfbuzz_la-hb-old.lo .libs/libharfbuzz_la-hb-old.o: hb-old.cc \
+  hb-shaper-impl-private.hh hb-private.hh ../config.h hb.h hb-blob.h \
+  hb-common.h /usr/include/stdint.h hb-buffer.h hb-unicode.h hb-font.h \
+  hb-set.h hb-shape.h hb-version.h hb-ot.h hb-ot-layout.h hb-ot-tag.h \
+  /usr/include/stdlib.h /usr/include/machine/ieeefp.h \
+  /usr/include/_ansi.h /usr/include/newlib.h /usr/include/sys/config.h \
+  /usr/include/sys/features.h /usr/include/cygwin/config.h \
+  /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h \
+  /usr/include/sys/reent.h /usr/include/_ansi.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/machine/_default_types.h \
+  /usr/include/sys/lock.h /usr/include/machine/stdlib.h \
+  /usr/include/alloca.h /usr/include/cygwin/stdlib.h \
+  /usr/include/cygwin/wait.h /usr/include/string.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/string.h \
+  /usr/include/assert.h /usr/include/stdio.h \
+  /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/cygwin/types.h /usr/include/endian.h \
+  /usr/include/bits/endian.h /usr/include/byteswap.h \
+  /usr/include/sys/sysmacros.h /usr/include/sys/stdio.h \
+  /usr/include/errno.h /usr/include/sys/errno.h hb-shaper-private.hh \
+  hb-shape-plan.h hb-buffer-private.hh hb-object-private.hh \
+  hb-atomic-private.hh hb-mutex-private.hh /usr/include/pthread.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/cygwin/signal.h /usr/include/sched.h \
+  /usr/include/sys/sched.h /usr/include/time.h \
+  /usr/include/machine/time.h /usr/include/cygwin/time.h \
+  hb-unicode-private.hh hb-shaper-list.hh hb-shape-plan-private.hh \
+  hb-font-private.hh ./hb-old/harfbuzz.h ./hb-old/harfbuzz-external.h \
+  ./hb-unicode.h ./hb-old/harfbuzz-global.h ./hb-old/harfbuzz-buffer.h \
+  ./hb-old/harfbuzz-gdef.h ./hb-old/harfbuzz-open.h \
+  ./hb-old/harfbuzz-stream.h ./hb-old/harfbuzz-gsub.h \
+  ./hb-old/harfbuzz-gpos.h ./hb-old/harfbuzz-shaper.h \
+  ./hb-old/harfbuzz-stream-private.h ./hb-old/harfbuzz-impl.h
+
+hb-shaper-impl-private.hh:
+
+hb-private.hh:
+
+../config.h:
+
+hb.h:
+
+hb-blob.h:
+
+hb-common.h:
+
+/usr/include/stdint.h:
+
+hb-buffer.h:
+
+hb-unicode.h:
+
+hb-font.h:
+
+hb-set.h:
+
+hb-shape.h:
+
+hb-version.h:
+
+hb-ot.h:
+
+hb-ot-layout.h:
+
+hb-ot-tag.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/machine/ieeefp.h:
+
+/usr/include/_ansi.h:
+
+/usr/include/newlib.h:
+
+/usr/include/sys/config.h:
+
+/usr/include/sys/features.h:
+
+/usr/include/cygwin/config.h:
+
+/usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h:
+
+/usr/include/sys/reent.h:
+
+/usr/include/_ansi.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/machine/_default_types.h:
+
+/usr/include/sys/lock.h:
+
+/usr/include/machine/stdlib.h:
+
+/usr/include/alloca.h:
+
+/usr/include/cygwin/stdlib.h:
+
+/usr/include/cygwin/wait.h:
+
+/usr/include/string.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/string.h:
+
+/usr/include/assert.h:
+
+/usr/include/stdio.h:
+
+/usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/cygwin/types.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/byteswap.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/sys/stdio.h:
+
+/usr/include/errno.h:
+
+/usr/include/sys/errno.h:
+
+hb-shaper-private.hh:
+
+hb-shape-plan.h:
+
+hb-buffer-private.hh:
+
+hb-object-private.hh:
+
+hb-atomic-private.hh:
+
+hb-mutex-private.hh:
+
+/usr/include/pthread.h:
+
+/usr/include/signal.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/cygwin/signal.h:
+
+/usr/include/sched.h:
+
+/usr/include/sys/sched.h:
+
+/usr/include/time.h:
+
+/usr/include/machine/time.h:
+
+/usr/include/cygwin/time.h:
+
+hb-unicode-private.hh:
+
+hb-shaper-list.hh:
+
+hb-shape-plan-private.hh:
+
+hb-font-private.hh:
+
+./hb-old/harfbuzz.h:
+
+./hb-old/harfbuzz-external.h:
+
+./hb-unicode.h:
+
+./hb-old/harfbuzz-global.h:
+
+./hb-old/harfbuzz-buffer.h:
+
+./hb-old/harfbuzz-gdef.h:
+
+./hb-old/harfbuzz-open.h:
+
+./hb-old/harfbuzz-stream.h:
+
+./hb-old/harfbuzz-gsub.h:
+
+./hb-old/harfbuzz-gpos.h:
+
+./hb-old/harfbuzz-shaper.h:
+
+./hb-old/harfbuzz-stream-private.h:
+
+./hb-old/harfbuzz-impl.h:
