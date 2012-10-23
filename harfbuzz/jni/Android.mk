@@ -27,11 +27,11 @@ include $(CLEAR_VARS)
 
 LOCAL_ARM_MODE := arm
 
-LOCAL_MODULE := complex_script_rendering
+LOCAL_MODULE := complex_script_layout
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/freetype/include $(LOCAL_PATH)/harfbuzz/src
 
-LOCAL_SRC_FILES := complex_script_rendering.c
+LOCAL_SRC_FILES := complex_script_layout.c
 
 LOCAL_STATIC_LIBRARIES := ft2 harfbuzz
 
