@@ -91,7 +91,7 @@ void Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniInitiali
  * @return array of glyphs corresponding to unicode text
  */
 jintArray Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniGetGlyphsForText(
-    JNIEnv* env, jobject thiz, jstring jUnicodeText, jint jStart, jint jEnd) {
+    JNIEnv* env, jobject thiz, jstring jUnicodeText) {
 
     hb_buffer_t *buffer;
     int glyph_count;
@@ -116,7 +116,10 @@ jintArray Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniGet
 
     /* Layout the text */
     __android_log_print(2, "getGlyphsAfterShaping", "Text being shaped = %s\n", text);
-    hb_buffer_add_utf16(buffer, text, textLen, jStart, jEnd);
+    for (i = 0; i < textLen; i++) {
+       __android_log_print(2, "getGlyphsAfterShaping", "Char%d = %x", i, text[i]);
+    }
+    hb_buffer_add_utf16(buffer, text, textLen, 0, textLen);
     __android_log_print(2, "getGlyphsAfterShaping", "Before HarfBuzz shape()\n");
     hb_shape(font, buffer, NULL, 0);
     __android_log_print(2, "getGlyphsAfterShaping", "After HarfBuzz shape()\n");
