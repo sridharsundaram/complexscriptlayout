@@ -417,8 +417,8 @@ update_consonant_positions (const hb_ot_shape_plan_t *plan,
     unsigned int count = buffer->len;
     for (unsigned int i = 0; i < count; i++)
       if (buffer->info[i].indic_position() == POS_BASE_C) {
-	glyphs[consonant_pos] = buffer->info[i].codepoint;
-	buffer->info[i].indic_position() = consonant_position_from_face (indic_plan, glyphs, 2, face);
+	    glyphs[consonant_pos] = buffer->info[i].codepoint;
+	    buffer->info[i].indic_position() = consonant_position_from_face (indic_plan, glyphs, 2, face);
       }
   }
 }
