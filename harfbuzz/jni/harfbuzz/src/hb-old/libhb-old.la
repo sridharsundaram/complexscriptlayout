@@ -23,9 +23,9 @@ dependency_libs=''
 weak_library_names=''
 
 # Version information for libhb-old.
-current=6
-age=0
-revision=3
+current=
+age=
+revision=
 
 # Is this an already installed library?
 installed=no

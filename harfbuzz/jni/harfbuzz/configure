@@ -16072,7 +16072,7 @@ if test "x$GCC" = "xyes"; then
 		;;
 		*)
 			# Hide inline methods
-			CXXFLAGS="$CXXFLAGS "
+			CXXFLAGS="$CXXFLAGS -fvisibility-inlines-hidden"
 		;;
 	esac
 

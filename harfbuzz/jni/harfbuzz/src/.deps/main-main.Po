@@ -1,35 +1,28 @@
-main-main.o main-main.o: main.cc hb-mutex-private.hh hb-private.hh \
-  ../config.h hb.h hb-blob.h hb-common.h /usr/include/stdint.h \
-  hb-buffer.h hb-unicode.h hb-font.h hb-set.h hb-shape.h hb-version.h \
-  hb-ot.h hb-ot-layout.h hb-ot-tag.h /usr/include/stdlib.h \
-  /usr/include/machine/ieeefp.h /usr/include/_ansi.h \
-  /usr/include/newlib.h /usr/include/sys/config.h \
-  /usr/include/sys/features.h /usr/include/cygwin/config.h \
-  /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h \
-  /usr/include/sys/reent.h /usr/include/_ansi.h /usr/include/sys/_types.h \
-  /usr/include/machine/_types.h /usr/include/machine/_default_types.h \
-  /usr/include/sys/lock.h /usr/include/machine/stdlib.h \
-  /usr/include/alloca.h /usr/include/cygwin/stdlib.h \
-  /usr/include/cygwin/wait.h /usr/include/string.h \
-  /usr/include/sys/cdefs.h /usr/include/sys/string.h \
-  /usr/include/assert.h /usr/include/stdio.h \
-  /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h \
-  /usr/include/sys/types.h /usr/include/machine/types.h \
-  /usr/include/cygwin/types.h /usr/include/endian.h \
-  /usr/include/bits/endian.h /usr/include/byteswap.h \
-  /usr/include/sys/sysmacros.h /usr/include/sys/stdio.h \
-  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/pthread.h \
-  /usr/include/signal.h /usr/include/sys/signal.h \
-  /usr/include/cygwin/signal.h /usr/include/sched.h \
-  /usr/include/sys/sched.h /usr/include/time.h \
-  /usr/include/machine/time.h /usr/include/cygwin/time.h \
-  hb-open-file-private.hh hb-open-type-private.hh \
-  hb-ot-layout-gdef-table.hh hb-ot-layout-common-private.hh \
-  hb-ot-layout-private.hh hb-font-private.hh hb-object-private.hh \
-  hb-atomic-private.hh hb-shaper-private.hh hb-shape-plan.h \
-  hb-buffer-private.hh hb-unicode-private.hh hb-shaper-list.hh \
-  hb-shape-plan-private.hh hb-set-private.hh \
-  hb-ot-layout-gsubgpos-private.hh
+main-main.o: main.cc hb-mutex-private.hh hb-private.hh ../config.h hb.h \
+ hb-blob.h hb-common.h c:\mingw\lib\gcc\mingw32\4.8.1\include\stdint.h \
+ c:\mingw\include\stdint.h c:\mingw\include\_mingw.h \
+ c:\mingw\include\sdkddkver.h \
+ c:\mingw\lib\gcc\mingw32\4.8.1\include\stddef.h hb-buffer.h hb-unicode.h \
+ hb-font.h hb-set.h hb-shape.h hb-version.h hb-ot.h hb-ot-layout.h \
+ hb-ot-tag.h c:\mingw\include\stdlib.h c:\mingw\include\string.h \
+ c:\mingw\include\assert.h c:\mingw\include\stdio.h \
+ c:\mingw\lib\gcc\mingw32\4.8.1\include\stdarg.h \
+ c:\mingw\include\sys\types.h c:\mingw\include\errno.h \
+ c:\mingw\include\windows.h c:\mingw\include\windef.h \
+ c:\mingw\include\winnt.h c:\mingw\include\winerror.h \
+ c:\mingw\include\basetsd.h c:\mingw\include\pshpack4.h \
+ c:\mingw\include\poppack.h c:\mingw\include\wincon.h \
+ c:\mingw\include\winbase.h c:\mingw\include\wingdi.h \
+ c:\mingw\include\winuser.h c:\mingw\include\winnls.h \
+ c:\mingw\include\winver.h c:\mingw\include\winnetwk.h \
+ c:\mingw\include\winreg.h c:\mingw\include\reason.h \
+ c:\mingw\include\winsvc.h hb-open-file-private.hh \
+ hb-open-type-private.hh hb-ot-layout-gdef-table.hh \
+ hb-ot-layout-common-private.hh hb-ot-layout-private.hh \
+ hb-font-private.hh hb-object-private.hh hb-atomic-private.hh \
+ hb-shaper-private.hh hb-shape-plan.h hb-buffer-private.hh \
+ hb-unicode-private.hh hb-shaper-list.hh hb-shape-plan-private.hh \
+ hb-set-private.hh hb-ot-layout-gsubgpos-private.hh
 
 hb-mutex-private.hh:
 
@@ -43,7 +36,15 @@ hb-blob.h:
 
 hb-common.h:
 
-/usr/include/stdint.h:
+c:\mingw\lib\gcc\mingw32\4.8.1\include\stdint.h:
+
+c:\mingw\include\stdint.h:
+
+c:\mingw\include\_mingw.h:
+
+c:\mingw\include\sdkddkver.h:
+
+c:\mingw\lib\gcc\mingw32\4.8.1\include\stddef.h:
 
 hb-buffer.h:
 
@@ -63,91 +64,53 @@ hb-ot-layout.h:
 
 hb-ot-tag.h:
 
-/usr/include/stdlib.h:
+c:\mingw\include\stdlib.h:
 
-/usr/include/machine/ieeefp.h:
+c:\mingw\include\string.h:
 
-/usr/include/_ansi.h:
+c:\mingw\include\assert.h:
 
-/usr/include/newlib.h:
+c:\mingw\include\stdio.h:
 
-/usr/include/sys/config.h:
+c:\mingw\lib\gcc\mingw32\4.8.1\include\stdarg.h:
 
-/usr/include/sys/features.h:
+c:\mingw\include\sys\types.h:
 
-/usr/include/cygwin/config.h:
+c:\mingw\include\errno.h:
 
-/usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h:
+c:\mingw\include\windows.h:
 
-/usr/include/sys/reent.h:
+c:\mingw\include\windef.h:
 
-/usr/include/_ansi.h:
+c:\mingw\include\winnt.h:
 
-/usr/include/sys/_types.h:
+c:\mingw\include\winerror.h:
 
-/usr/include/machine/_types.h:
+c:\mingw\include\basetsd.h:
 
-/usr/include/machine/_default_types.h:
+c:\mingw\include\pshpack4.h:
 
-/usr/include/sys/lock.h:
+c:\mingw\include\poppack.h:
 
-/usr/include/machine/stdlib.h:
+c:\mingw\include\wincon.h:
 
-/usr/include/alloca.h:
+c:\mingw\include\winbase.h:
 
-/usr/include/cygwin/stdlib.h:
+c:\mingw\include\wingdi.h:
 
-/usr/include/cygwin/wait.h:
+c:\mingw\include\winuser.h:
 
-/usr/include/string.h:
+c:\mingw\include\winnls.h:
 
-/usr/include/sys/cdefs.h:
+c:\mingw\include\winver.h:
 
-/usr/include/sys/string.h:
+c:\mingw\include\winnetwk.h:
 
-/usr/include/assert.h:
+c:\mingw\include\winreg.h:
 
-/usr/include/stdio.h:
+c:\mingw\include\reason.h:
 
-/usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h:
-
-/usr/include/sys/types.h:
-
-/usr/include/machine/types.h:
-
-/usr/include/cygwin/types.h:
-
-/usr/include/endian.h:
-
-/usr/include/bits/endian.h:
-
-/usr/include/byteswap.h:
-
-/usr/include/sys/sysmacros.h:
-
-/usr/include/sys/stdio.h:
-
-/usr/include/errno.h:
-
-/usr/include/sys/errno.h:
-
-/usr/include/pthread.h:
-
-/usr/include/signal.h:
-
-/usr/include/sys/signal.h:
-
-/usr/include/cygwin/signal.h:
-
-/usr/include/sched.h:
-
-/usr/include/sys/sched.h:
-
-/usr/include/time.h:
-
-/usr/include/machine/time.h:
-
-/usr/include/cygwin/time.h:
+c:\mingw\include\winsvc.h:
 
 hb-open-file-private.hh:
 

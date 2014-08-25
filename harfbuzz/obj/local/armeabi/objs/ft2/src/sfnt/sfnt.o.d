@@ -1,287 +1,281 @@
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/obj/local/armeabi/objs/ft2/src/sfnt/sfnt.o: \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfnt.c \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/ft2build.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/config/ftheader.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/internal.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfntpic.c \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/freetype.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/config/ftconfig.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/config/ftoption.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/config/ftstdlib.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/limits.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/android/api-level.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/limits.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/limits.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/internal_types.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/limits.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/syslimits.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/string.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/malloc.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/stdio.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/_types.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/_types.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/types.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/stdint.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/posix_types.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/stddef.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/compiler.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/asm/posix_types.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/asm/types.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/types.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/kernel.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/stdlib.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/alloca.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/strings.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/memory.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/setjmp.h \
- /cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/setjmp.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/fterrors.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftmoderr.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/fterrdef.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/fttypes.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftsystem.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftimage.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftobjs.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftrender.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftmodapi.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftglyph.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftsizes.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftlcdfil.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftmemory.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftgloadr.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftdriver.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/autohint.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftserv.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftpic.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfntpic.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sferrors.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttload.c \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftdebug.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftstream.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/tttags.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttload.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/tttypes.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/tttables.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftmm.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/t1tables.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttmtx.c \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttmtx.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttcmap.c \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftvalid.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttcmap.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/services/svttcmap.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttcmapc.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttkern.c \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttkern.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfobjs.c \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfobjs.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/sfnt.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ttnameid.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/services/svpscmap.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftsnames.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttbdf.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftbdf.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfdriver.c \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfdriver.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttsbit.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttpost.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/services/svbdf.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/services/svgldict.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/services/svpostnm.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/services/svsfnt.h \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttsbit.c \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttpost.c \
- /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttbdf.c
+obj/local/armeabi/objs/ft2/src/sfnt/sfnt.o: jni/freetype/src/sfnt/sfnt.c \
+ jni/freetype/include/ft2build.h \
+ jni/freetype/include/freetype/config/ftheader.h \
+ jni/freetype/include/freetype/internal/internal.h \
+ jni/freetype/src/sfnt/sfntpic.c jni/freetype/include/freetype/freetype.h \
+ jni/freetype/include/freetype/config/ftconfig.h \
+ jni/freetype/include/freetype/config/ftoption.h \
+ jni/freetype/include/freetype/config/ftstdlib.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/limits.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/android/api-level.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/limits.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/limits.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/internal_types.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/limits.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/syslimits.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/asm/page.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/string.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/malloc.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/stdio.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/types.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/stdint.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/_types.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/_types.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/_wchar_limits.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/posix_types.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/stddef.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/compiler.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/asm/posix_types.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/asm/types.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/types.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/kernel.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/stdlib.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/alloca.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/strings.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/memory.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/setjmp.h \
+ e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/setjmp.h \
+ jni/freetype/include/freetype/fterrors.h \
+ jni/freetype/include/freetype/ftmoderr.h \
+ jni/freetype/include/freetype/fterrdef.h \
+ jni/freetype/include/freetype/fttypes.h \
+ jni/freetype/include/freetype/ftsystem.h \
+ jni/freetype/include/freetype/ftimage.h \
+ jni/freetype/include/freetype/internal/ftobjs.h \
+ jni/freetype/include/freetype/ftrender.h \
+ jni/freetype/include/freetype/ftmodapi.h \
+ jni/freetype/include/freetype/ftglyph.h \
+ jni/freetype/include/freetype/ftsizes.h \
+ jni/freetype/include/freetype/ftlcdfil.h \
+ jni/freetype/include/freetype/internal/ftmemory.h \
+ jni/freetype/include/freetype/internal/ftgloadr.h \
+ jni/freetype/include/freetype/internal/ftdriver.h \
+ jni/freetype/include/freetype/internal/autohint.h \
+ jni/freetype/include/freetype/internal/ftserv.h \
+ jni/freetype/include/freetype/internal/ftpic.h \
+ jni/freetype/src/sfnt/sfntpic.h jni/freetype/src/sfnt/sferrors.h \
+ jni/freetype/src/sfnt/ttload.c \
+ jni/freetype/include/freetype/internal/ftdebug.h \
+ jni/freetype/include/freetype/internal/ftstream.h \
+ jni/freetype/include/freetype/tttags.h jni/freetype/src/sfnt/ttload.h \
+ jni/freetype/include/freetype/internal/tttypes.h \
+ jni/freetype/include/freetype/tttables.h \
+ jni/freetype/include/freetype/ftmm.h \
+ jni/freetype/include/freetype/t1tables.h jni/freetype/src/sfnt/ttmtx.c \
+ jni/freetype/src/sfnt/ttmtx.h jni/freetype/src/sfnt/ttcmap.c \
+ jni/freetype/include/freetype/internal/ftvalid.h \
+ jni/freetype/src/sfnt/ttcmap.h \
+ jni/freetype/include/freetype/internal/services/svttcmap.h \
+ jni/freetype/src/sfnt/ttcmapc.h jni/freetype/src/sfnt/ttkern.c \
+ jni/freetype/src/sfnt/ttkern.h jni/freetype/src/sfnt/sfobjs.c \
+ jni/freetype/src/sfnt/sfobjs.h \
+ jni/freetype/include/freetype/internal/sfnt.h \
+ jni/freetype/include/freetype/ttnameid.h \
+ jni/freetype/include/freetype/internal/services/svpscmap.h \
+ jni/freetype/include/freetype/ftsnames.h jni/freetype/src/sfnt/ttbdf.h \
+ jni/freetype/include/freetype/ftbdf.h jni/freetype/src/sfnt/sfdriver.c \
+ jni/freetype/src/sfnt/sfdriver.h jni/freetype/src/sfnt/ttsbit.h \
+ jni/freetype/src/sfnt/ttpost.h \
+ jni/freetype/include/freetype/internal/services/svbdf.h \
+ jni/freetype/include/freetype/internal/services/svgldict.h \
+ jni/freetype/include/freetype/internal/services/svpostnm.h \
+ jni/freetype/include/freetype/internal/services/svsfnt.h \
+ jni/freetype/src/sfnt/ttsbit.c jni/freetype/src/sfnt/ttpost.c \
+ jni/freetype/src/sfnt/ttbdf.c
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/ft2build.h:
+jni/freetype/include/ft2build.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/config/ftheader.h:
+jni/freetype/include/freetype/config/ftheader.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/internal.h:
+jni/freetype/include/freetype/internal/internal.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfntpic.c:
+jni/freetype/src/sfnt/sfntpic.c:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/freetype.h:
+jni/freetype/include/freetype/freetype.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/config/ftconfig.h:
+jni/freetype/include/freetype/config/ftconfig.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/config/ftoption.h:
+jni/freetype/include/freetype/config/ftoption.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/config/ftstdlib.h:
+jni/freetype/include/freetype/config/ftstdlib.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/limits.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/limits.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/cdefs.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/cdefs.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/android/api-level.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/android/api-level.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/limits.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/limits.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/limits.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/limits.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/internal_types.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/internal_types.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/limits.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/limits.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/syslimits.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/syslimits.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/string.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/asm/page.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/malloc.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/string.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/stdio.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/malloc.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/_types.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/stdio.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/_types.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/types.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/types.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/stdint.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/stdint.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/_types.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/posix_types.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/_types.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/stddef.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/_wchar_limits.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/compiler.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/posix_types.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/asm/posix_types.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/stddef.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/asm/types.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/compiler.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/types.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/asm/posix_types.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/kernel.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/asm/types.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/types.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/stdlib.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/kernel.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/alloca.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/strings.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/stdlib.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/memory.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/alloca.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/setjmp.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/strings.h:
 
-/cygdrive/c/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/setjmp.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/memory.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/fterrors.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/setjmp.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftmoderr.h:
+e:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/setjmp.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/fterrdef.h:
+jni/freetype/include/freetype/fterrors.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/fttypes.h:
+jni/freetype/include/freetype/ftmoderr.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftsystem.h:
+jni/freetype/include/freetype/fterrdef.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftimage.h:
+jni/freetype/include/freetype/fttypes.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftobjs.h:
+jni/freetype/include/freetype/ftsystem.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftrender.h:
+jni/freetype/include/freetype/ftimage.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftmodapi.h:
+jni/freetype/include/freetype/internal/ftobjs.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftglyph.h:
+jni/freetype/include/freetype/ftrender.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftsizes.h:
+jni/freetype/include/freetype/ftmodapi.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftlcdfil.h:
+jni/freetype/include/freetype/ftglyph.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftmemory.h:
+jni/freetype/include/freetype/ftsizes.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftgloadr.h:
+jni/freetype/include/freetype/ftlcdfil.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftdriver.h:
+jni/freetype/include/freetype/internal/ftmemory.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/autohint.h:
+jni/freetype/include/freetype/internal/ftgloadr.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftserv.h:
+jni/freetype/include/freetype/internal/ftdriver.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftpic.h:
+jni/freetype/include/freetype/internal/autohint.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfntpic.h:
+jni/freetype/include/freetype/internal/ftserv.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sferrors.h:
+jni/freetype/include/freetype/internal/ftpic.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttload.c:
+jni/freetype/src/sfnt/sfntpic.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftdebug.h:
+jni/freetype/src/sfnt/sferrors.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftstream.h:
+jni/freetype/src/sfnt/ttload.c:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/tttags.h:
+jni/freetype/include/freetype/internal/ftdebug.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttload.h:
+jni/freetype/include/freetype/internal/ftstream.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/tttypes.h:
+jni/freetype/include/freetype/tttags.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/tttables.h:
+jni/freetype/src/sfnt/ttload.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftmm.h:
+jni/freetype/include/freetype/internal/tttypes.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/t1tables.h:
+jni/freetype/include/freetype/tttables.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttmtx.c:
+jni/freetype/include/freetype/ftmm.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttmtx.h:
+jni/freetype/include/freetype/t1tables.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttcmap.c:
+jni/freetype/src/sfnt/ttmtx.c:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/ftvalid.h:
+jni/freetype/src/sfnt/ttmtx.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttcmap.h:
+jni/freetype/src/sfnt/ttcmap.c:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/services/svttcmap.h:
+jni/freetype/include/freetype/internal/ftvalid.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttcmapc.h:
+jni/freetype/src/sfnt/ttcmap.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttkern.c:
+jni/freetype/include/freetype/internal/services/svttcmap.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttkern.h:
+jni/freetype/src/sfnt/ttcmapc.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfobjs.c:
+jni/freetype/src/sfnt/ttkern.c:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfobjs.h:
+jni/freetype/src/sfnt/ttkern.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/sfnt.h:
+jni/freetype/src/sfnt/sfobjs.c:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ttnameid.h:
+jni/freetype/src/sfnt/sfobjs.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/services/svpscmap.h:
+jni/freetype/include/freetype/internal/sfnt.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftsnames.h:
+jni/freetype/include/freetype/ttnameid.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttbdf.h:
+jni/freetype/include/freetype/internal/services/svpscmap.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/ftbdf.h:
+jni/freetype/include/freetype/ftsnames.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfdriver.c:
+jni/freetype/src/sfnt/ttbdf.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/sfdriver.h:
+jni/freetype/include/freetype/ftbdf.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttsbit.h:
+jni/freetype/src/sfnt/sfdriver.c:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttpost.h:
+jni/freetype/src/sfnt/sfdriver.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/services/svbdf.h:
+jni/freetype/src/sfnt/ttsbit.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/services/svgldict.h:
+jni/freetype/src/sfnt/ttpost.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/services/svpostnm.h:
+jni/freetype/include/freetype/internal/services/svbdf.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include/freetype/internal/services/svsfnt.h:
+jni/freetype/include/freetype/internal/services/svgldict.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttsbit.c:
+jni/freetype/include/freetype/internal/services/svpostnm.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttpost.c:
+jni/freetype/include/freetype/internal/services/svsfnt.h:
 
-/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/src/sfnt/ttbdf.c:
+jni/freetype/src/sfnt/ttsbit.c:
+
+jni/freetype/src/sfnt/ttpost.c:
+
+jni/freetype/src/sfnt/ttbdf.c:

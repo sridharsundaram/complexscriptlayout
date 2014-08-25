@@ -50,12 +50,12 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = i686-pc-cygwin
-host_triplet = i686-pc-cygwin
+build_triplet = i686-pc-mingw32
+host_triplet = i686-pc-mingw32
 bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3)
-##am__append_1 = hb-view
-#am__append_2 = hb-shape
-#am__append_3 = hb-ot-shape-closure
+###am__append_1 = hb-view
+##am__append_2 = hb-shape
+##am__append_3 = hb-ot-shape-closure
 subdir = util
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
 	$(top_srcdir)/depcomp
@@ -71,17 +71,17 @@ mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
-##am__EXEEXT_1 = hb-view$(EXEEXT)
-#am__EXEEXT_2 = hb-shape$(EXEEXT)
-#am__EXEEXT_3 = hb-ot-shape-closure$(EXEEXT)
+###am__EXEEXT_1 = hb-view$(EXEEXT)
+##am__EXEEXT_2 = hb-shape$(EXEEXT)
+##am__EXEEXT_3 = hb-ot-shape-closure$(EXEEXT)
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__hb_ot_shape_closure_SOURCES_DIST = hb-ot-shape-closure.cc \
 	options.cc options.hh main-font-text.hh
 am__objects_1 =
-#am_hb_ot_shape_closure_OBJECTS = hb-ot-shape-closure.$(OBJEXT) \
-#	options.$(OBJEXT) \
-#	$(am__objects_1)
+##am_hb_ot_shape_closure_OBJECTS = hb-ot-shape-closure.$(OBJEXT) \
+##	options.$(OBJEXT) \
+##	$(am__objects_1)
 hb_ot_shape_closure_OBJECTS = $(am_hb_ot_shape_closure_OBJECTS)
 hb_ot_shape_closure_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
@@ -94,10 +94,10 @@ am__v_lt_0 = --silent
 am__v_lt_1 = 
 am__hb_shape_SOURCES_DIST = hb-shape.cc options.cc options.hh \
 	main-font-text.hh shape-consumer.hh
-#am_hb_shape_OBJECTS =  \
-#	hb-shape.$(OBJEXT) \
-#	options.$(OBJEXT) \
-#	$(am__objects_1)
+##am_hb_shape_OBJECTS =  \
+##	hb-shape.$(OBJEXT) \
+##	options.$(OBJEXT) \
+##	$(am__objects_1)
 hb_shape_OBJECTS = $(am_hb_shape_OBJECTS)
 hb_shape_LDADD = $(LDADD)
 hb_shape_DEPENDENCIES = $(top_builddir)/src/libharfbuzz.la \
@@ -108,21 +108,21 @@ am__hb_view_SOURCES_DIST = hb-view.cc options.cc options.hh \
 	ansi-print.hh helper-cairo.cc helper-cairo.hh \
 	helper-cairo-ansi.cc helper-cairo-ansi.hh view-cairo.cc \
 	view-cairo.hh
-##am_hb_view_OBJECTS = hb-view.$(OBJEXT) \
-##	options.$(OBJEXT) \
-##	ansi-print.$(OBJEXT) \
-##	helper-cairo.$(OBJEXT) \
-##	helper-cairo-ansi.$(OBJEXT) \
-##	view-cairo.$(OBJEXT) \
-##	$(am__objects_1)
+###am_hb_view_OBJECTS = hb-view.$(OBJEXT) \
+###	options.$(OBJEXT) \
+###	ansi-print.$(OBJEXT) \
+###	helper-cairo.$(OBJEXT) \
+###	helper-cairo-ansi.$(OBJEXT) \
+###	view-cairo.$(OBJEXT) \
+###	$(am__objects_1)
 hb_view_OBJECTS = $(am_hb_view_OBJECTS)
 am__DEPENDENCIES_2 = $(top_builddir)/src/libharfbuzz.la \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
-##hb_view_DEPENDENCIES = $(am__DEPENDENCIES_2) \
-##	$(am__DEPENDENCIES_1) \
-##	$(am__DEPENDENCIES_1) \
-##	$(am__DEPENDENCIES_1)
+###hb_view_DEPENDENCIES = $(am__DEPENDENCIES_2) \
+###	$(am__DEPENDENCIES_1) \
+###	$(am__DEPENDENCIES_1) \
+###	$(am__DEPENDENCIES_1)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -187,13 +187,13 @@ am__can_run_installinfo = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run aclocal-1.12
+ACLOCAL = ${SHELL} /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run aclocal-1.12
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = ar
-AUTOCONF = ${SHELL} /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run autoconf
-AUTOHEADER = ${SHELL} /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run autoheader
-AUTOMAKE = ${SHELL} /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run automake-1.12
+AUTOCONF = ${SHELL} /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run autoconf
+AUTOHEADER = ${SHELL} /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run autoheader
+AUTOMAKE = ${SHELL} /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run automake-1.12
 AWK = gawk
 CAIRO_CFLAGS = 
 CAIRO_FT_CFLAGS = 
@@ -209,8 +209,8 @@ CPPFLAGS =
 CXX = g++
 CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -g -O2 -fno-rtti -fno-exceptions -Wcast-align 
-CYGPATH_W = cygpath -w
+CXXFLAGS = -g -O2 -fno-rtti -fno-exceptions -Wcast-align
+CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = dlltool
@@ -219,11 +219,11 @@ DUMPBIN =
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
-EGREP = /usr/bin/grep -E
+EGREP = /bin/grep -E
 EXEEXT = .exe
-FGREP = /usr/bin/grep -F
-FREETYPE_CFLAGS = -I/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype//include/freetype -I/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype//include  
-FREETYPE_LIBS = -L/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype//lib -lfreetype  
+FGREP = /bin/grep -F
+FREETYPE_CFLAGS = 
+FREETYPE_LIBS = 
 GLIB_CFLAGS = 
 GLIB_LIBS = 
 GLIB_MKENUMS = 
@@ -231,7 +231,7 @@ GOBJECT_CFLAGS =
 GOBJECT_LIBS = 
 GRAPHITE2_CFLAGS = 
 GRAPHITE2_LIBS = 
-GREP = /usr/bin/grep
+GREP = /bin/grep
 GTHREAD_CFLAGS = 
 GTHREAD_LIBS = 
 HB_LIBTOOL_VERSION_INFO = 905:0:905
@@ -243,23 +243,23 @@ ICU_CFLAGS =
 ICU_LE_CFLAGS = 
 ICU_LE_LIBS = 
 ICU_LIBS = 
-INSTALL = /usr/bin/install -c
+INSTALL = /bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /usr/i686-pc-cygwin/bin/ld.exe
+LD = c:/mingw/mingw32/bin/ld.exe
 LDFLAGS =  -Bsymbolic-functions
 LIBOBJS = 
 LIBS = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
-LN_S = ln -s
+LN_S = cp -p
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run makeinfo
+MAKEINFO = ${SHELL} /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run makeinfo
 MANIFEST_TOOL = :
-MKDIR_P = /usr/bin/mkdir -p
-NM = /usr/bin/nm -B
+MKDIR_P = /bin/mkdir -p
+NM = /mingw/bin/nm
 NMEDIT = 
 OBJDUMP = objdump
 OBJEXT = o
@@ -273,22 +273,22 @@ PACKAGE_TARNAME = harfbuzz
 PACKAGE_URL = http://harfbuzz.org/
 PACKAGE_VERSION = 0.9.5
 PATH_SEPARATOR = :
-PKG_CONFIG = /usr/bin/pkg-config
-PTHREAD_CC = gcc
+PKG_CONFIG = 
+PTHREAD_CC = 
 PTHREAD_CFLAGS = 
 PTHREAD_LIBS = 
 RANLIB = ranlib
-SED = /usr/bin/sed
+SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
 UNISCRIBE_CFLAGS = 
 UNISCRIBE_LIBS = -lusp10 -lgdi32
 VERSION = 0.9.5
-abs_builddir = /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/util
-abs_srcdir = /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/util
-abs_top_builddir = /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz
-abs_top_srcdir = /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz
+abs_builddir = /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/util
+abs_srcdir = /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/util
+abs_top_builddir = /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz
+abs_top_srcdir = /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -300,10 +300,10 @@ am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 ax_pthread_config = 
 bindir = ${exec_prefix}/bin
-build = i686-pc-cygwin
+build = i686-pc-mingw32
 build_alias = 
 build_cpu = i686
-build_os = cygwin
+build_os = mingw32
 build_vendor = pc
 builddir = .
 datadir = ${datarootdir}
@@ -311,15 +311,15 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = i686-pc-cygwin
+host = i686-pc-mingw32
 host_alias = 
 host_cpu = i686
-host_os = cygwin
+host_os = mingw32
 host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/install-sh
+install_sh = ${SHELL} /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -359,42 +359,42 @@ LDADD = \
 	$(FREETYPE_LIBS) \
 	$(NULL)
 
-##hb_view_SOURCES = \
-##	hb-view.cc \
+###hb_view_SOURCES = \
+###	hb-view.cc \
+###	options.cc \
+###	options.hh \
+###	main-font-text.hh \
+###	shape-consumer.hh \
+###	ansi-print.cc \
+###	ansi-print.hh \
+###	helper-cairo.cc \
+###	helper-cairo.hh \
+###	helper-cairo-ansi.cc \
+###	helper-cairo-ansi.hh \
+###	view-cairo.cc \
+###	view-cairo.hh \
+###	$(NULL)
+
+###hb_view_LDADD = \
+###	$(LDADD) \
+###	$(CAIRO_LIBS) \
+###	$(CAIRO_FT_LIBS) \
+###	$(NULL)
+
+##hb_shape_SOURCES = \
+##	hb-shape.cc \
 ##	options.cc \
 ##	options.hh \
 ##	main-font-text.hh \
 ##	shape-consumer.hh \
-##	ansi-print.cc \
-##	ansi-print.hh \
-##	helper-cairo.cc \
-##	helper-cairo.hh \
-##	helper-cairo-ansi.cc \
-##	helper-cairo-ansi.hh \
-##	view-cairo.cc \
-##	view-cairo.hh \
 ##	$(NULL)
 
-##hb_view_LDADD = \
-##	$(LDADD) \
-##	$(CAIRO_LIBS) \
-##	$(CAIRO_FT_LIBS) \
+##hb_ot_shape_closure_SOURCES = \
+##	hb-ot-shape-closure.cc \
+##	options.cc \
+##	options.hh \
+##	main-font-text.hh \
 ##	$(NULL)
-
-#hb_shape_SOURCES = \
-#	hb-shape.cc \
-#	options.cc \
-#	options.hh \
-#	main-font-text.hh \
-#	shape-consumer.hh \
-#	$(NULL)
-
-#hb_ot_shape_closure_SOURCES = \
-#	hb-ot-shape-closure.cc \
-#	options.cc \
-#	options.hh \
-#	main-font-text.hh \
-#	$(NULL)
 
 all: all-am
 

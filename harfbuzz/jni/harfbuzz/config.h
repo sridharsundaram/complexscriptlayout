@@ -18,10 +18,10 @@
 /* #undef HAVE_CORETEXT */
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
-#define HAVE_DLFCN_H 1
+/* #undef HAVE_DLFCN_H */
 
 /* Have FreeType 2 library */
-#define HAVE_FREETYPE 1
+/* #undef HAVE_FREETYPE */
 
 /* Define to 1 if you have the `FT_Face_GetCharVariantIndex' function. */
 /* #undef HAVE_FT_FACE_GETCHARVARIANTINDEX */
@@ -51,7 +51,7 @@
 /* #undef HAVE_ICU_LE */
 
 /* Have Intel __sync_* atomic primitives */
-/* #undef HAVE_INTEL_ATOMIC_PRIMITIVES */
+#define HAVE_INTEL_ATOMIC_PRIMITIVES 1
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
@@ -66,7 +66,7 @@
 #define HAVE_MEMORY_H 1
 
 /* Define to 1 if you have the `mmap' function. */
-#define HAVE_MMAP 1
+/* #undef HAVE_MMAP */
 
 /* Define to 1 if you have the `mprotect' function. */
 #define HAVE_MPROTECT 1
@@ -75,16 +75,16 @@
 #define HAVE_OT 1
 
 /* Have POSIX threads */
-#define HAVE_PTHREAD 1
+/* #undef HAVE_PTHREAD */
 
 /* Have PTHREAD_PRIO_INHERIT. */
 /* #undef HAVE_PTHREAD_PRIO_INHERIT */
 
 /* Define to 1 if you have the <sched.h> header file. */
-#define HAVE_SCHED_H 1
+/* #undef HAVE_SCHED_H */
 
 /* Define to 1 if you have the `sched_yield' function. */
-#define HAVE_SCHED_YIELD 1
+/* #undef HAVE_SCHED_YIELD */
 
 /* Define to 1 if you have the <stdint.h> header file. */
 #define HAVE_STDINT_H 1
@@ -99,10 +99,10 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if you have the `sysconf' function. */
-#define HAVE_SYSCONF 1
+/* #undef HAVE_SYSCONF */
 
 /* Define to 1 if you have the <sys/mman.h> header file. */
-#define HAVE_SYS_MMAN_H 1
+/* #undef HAVE_SYS_MMAN_H */
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #define HAVE_SYS_STAT_H 1

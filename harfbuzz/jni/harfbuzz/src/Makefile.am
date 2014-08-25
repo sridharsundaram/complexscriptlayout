@@ -25,6 +25,7 @@ HBSOURCES =  \
 	hb-cache-private.hh \
 	hb-common.cc \
 	hb-fallback-shape.cc \
+	hb-ft.cc \
 	hb-font-private.hh \
 	hb-font.cc \
 	hb-mutex-private.hh \

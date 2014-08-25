@@ -1,5 +1,5 @@
 /**
- * Copyright Â© 2012 Shiva Kumar H R
+ * Copyright © 2012 Shiva Kumar H R
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a 
  * copy of this software and associated documentation files (the "Software"), 
@@ -56,7 +56,7 @@ void Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniInitiali
       return;
     }
     __android_log_print(2, "jniInitialize", "Successfully initialized FreeType library\n");
-    __android_log_print(2, "jniInitialize: fontFilePath - ", fontFilePath);
+    __android_log_print(2, "jniInitialize", "fontFilePath - %s", fontFilePath);
 
     error = FT_New_Face(ft_library, fontFilePath, 0, &ft_face); /* create face object */
     (*env)->ReleaseStringUTFChars(env, jFontFilePath, fontFilePath);

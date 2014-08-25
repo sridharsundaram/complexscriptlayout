@@ -52,8 +52,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = i686-pc-cygwin
-host_triplet = i686-pc-cygwin
+build_triplet = i686-pc-mingw32
+host_triplet = i686-pc-mingw32
 am__append_1 = \
 	hb-ot-layout.cc \
 	hb-ot-layout-common-private.hh \
@@ -81,14 +81,36 @@ am__append_1 = \
 	hb-ot-shape-private.hh \
 	$(NULL)
 
+FREETYPE_FILES:= \
+  ../../freetype/ftbbox.o \
+  ../../freetype/ftbitmap.o \
+  ../../freetype/ftfstype.o \
+  ../../freetype/ftglyph.o \
+  ../../freetype/ftlcdfil.o \
+  ../../freetype/ftstroke.o \
+  ../../freetype/fttype1.o \
+  ../../freetype/ftxf86.o \
+  ../../freetype/ftbase.o \
+  ../../freetype/ftsystem.o \
+  ../../freetype/ftinit.o \
+  ../../freetype/ftgasp.o \
+  ../../freetype/raster.o \
+  ../../freetype/sfnt.o \
+  ../../freetype/smooth.o \
+  ../../freetype/autofit.o \
+  ../../freetype/truetype.o \
+  ../../freetype/cff.o \
+  ../../freetype/psnames.o \
+  ../../freetype/pshinter.o
+
 am__append_2 = \
 	hb-ot.h \
 	hb-ot-layout.h \
 	hb-ot-tag.h \
 	$(NULL)
 
-am__append_3 = $(PTHREAD_CFLAGS)
-am__append_4 = $(PTHREAD_LIBS)
+#am__append_3 = $(PTHREAD_CFLAGS)
+#am__append_4 = $(PTHREAD_LIBS)
 #am__append_5 = $(GLIB_CFLAGS)
 #am__append_6 = $(GLIB_LIBS)
 #am__append_7 = hb-glib.cc
@@ -104,10 +126,10 @@ am__append_4 = $(PTHREAD_LIBS)
 #am__append_17 = $(ICU_LIBS)
 #am__append_18 = hb-icu.cc
 #am__append_19 = hb-icu.h
-am__append_20 = $(FREETYPE_CFLAGS)
-am__append_21 = $(FREETYPE_LIBS)
-am__append_22 = hb-ft.cc
-am__append_23 = hb-ft.h
+#am__append_20 = $(FREETYPE_CFLAGS)
+#am__append_21 = $(FREETYPE_LIBS)
+#am__append_22 = hb-ft.cc
+#am__append_23 = hb-ft.h
 #am__append_24 = $(GRAPHITE2_CFLAGS)
 #am__append_25 = $(GRAPHITE2_LIBS)
 #am__append_26 = hb-graphite2.cc
@@ -185,11 +207,11 @@ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" \
 	"$(DESTDIR)$(pkgincludedir)" "$(DESTDIR)$(pkgincludedir)"
 LTLIBRARIES = $(lib_LTLIBRARIES)
 am__DEPENDENCIES_1 =
-am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
+#am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
 #am__DEPENDENCIES_3 = $(am__DEPENDENCIES_1)
 #am__DEPENDENCIES_4 = $(am__DEPENDENCIES_1)
 #am__DEPENDENCIES_5 = $(am__DEPENDENCIES_1)
-am__DEPENDENCIES_6 = $(am__DEPENDENCIES_1)
+#am__DEPENDENCIES_6 = $(am__DEPENDENCIES_1)
 #am__DEPENDENCIES_7 = $(am__DEPENDENCIES_1)
 am__DEPENDENCIES_8 = $(am__DEPENDENCIES_1)
 #am__DEPENDENCIES_9 = $(am__DEPENDENCIES_1)
@@ -246,7 +268,7 @@ am__objects_2 = libharfbuzz_la-hb-ot-layout.lo \
 #am__objects_4 =  \
 #	libharfbuzz_la-hb-gobject-structs.lo
 #am__objects_5 = libharfbuzz_la-hb-icu.lo
-am__objects_6 = libharfbuzz_la-hb-ft.lo
+#am__objects_6 = libharfbuzz_la-hb-ft.lo
 #am__objects_7 = libharfbuzz_la-hb-graphite2.lo
 am__objects_8 = libharfbuzz_la-hb-uniscribe.lo
 #am__objects_9 = libharfbuzz_la-hb-coretext.lo
@@ -406,13 +428,13 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run aclocal-1.12
+ACLOCAL = ${SHELL} /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run aclocal-1.12
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = ar
-AUTOCONF = ${SHELL} /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run autoconf
-AUTOHEADER = ${SHELL} /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run autoheader
-AUTOMAKE = ${SHELL} /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run automake-1.12
+AUTOCONF = ${SHELL} /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run autoconf
+AUTOHEADER = ${SHELL} /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run autoheader
+AUTOMAKE = ${SHELL} /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run automake-1.12
 AWK = gawk
 CAIRO_CFLAGS = 
 CAIRO_FT_CFLAGS = 
@@ -428,8 +450,8 @@ CPPFLAGS =
 CXX = g++
 CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -g -O2 -fno-rtti -fno-exceptions -Wcast-align 
-CYGPATH_W = cygpath -w
+CXXFLAGS = -g -O2 -fno-rtti -fno-exceptions -Wcast-align
+CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = dlltool
@@ -438,11 +460,11 @@ DUMPBIN =
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
-EGREP = /usr/bin/grep -E
+EGREP = /bin/grep -E
 EXEEXT = .exe
-FGREP = /usr/bin/grep -F
-FREETYPE_CFLAGS = -I/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype//include/freetype -I/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype//include  
-FREETYPE_LIBS = -L/cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype//lib -lfreetype  
+FGREP = /bin/grep -F
+FREETYPE_CFLAGS = 
+FREETYPE_LIBS = 
 GLIB_CFLAGS = 
 GLIB_LIBS = 
 GLIB_MKENUMS = 
@@ -450,7 +472,7 @@ GOBJECT_CFLAGS =
 GOBJECT_LIBS = 
 GRAPHITE2_CFLAGS = 
 GRAPHITE2_LIBS = 
-GREP = /usr/bin/grep
+GREP = /bin/grep
 GTHREAD_CFLAGS = 
 GTHREAD_LIBS = 
 HB_LIBTOOL_VERSION_INFO = 905:0:905
@@ -462,23 +484,23 @@ ICU_CFLAGS =
 ICU_LE_CFLAGS = 
 ICU_LE_LIBS = 
 ICU_LIBS = 
-INSTALL = /usr/bin/install -c
+INSTALL = /bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /usr/i686-pc-cygwin/bin/ld.exe
+LD = c:/mingw/mingw32/bin/ld.exe
 LDFLAGS =  -Bsymbolic-functions
 LIBOBJS = 
 LIBS = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
-LN_S = ln -s
+LN_S = cp -p
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run makeinfo
+MAKEINFO = ${SHELL} /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/missing --run makeinfo
 MANIFEST_TOOL = :
-MKDIR_P = /usr/bin/mkdir -p
-NM = /usr/bin/nm -B
+MKDIR_P = /bin/mkdir -p
+NM = /mingw/bin/nm
 NMEDIT = 
 OBJDUMP = objdump
 OBJEXT = o
@@ -492,22 +514,22 @@ PACKAGE_TARNAME = harfbuzz
 PACKAGE_URL = http://harfbuzz.org/
 PACKAGE_VERSION = 0.9.5
 PATH_SEPARATOR = :
-PKG_CONFIG = /usr/bin/pkg-config
-PTHREAD_CC = gcc
+PKG_CONFIG = 
+PTHREAD_CC = 
 PTHREAD_CFLAGS = 
 PTHREAD_LIBS = 
 RANLIB = ranlib
-SED = /usr/bin/sed
+SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
 UNISCRIBE_CFLAGS = 
 UNISCRIBE_LIBS = -lusp10 -lgdi32
 VERSION = 0.9.5
-abs_builddir = /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/src
-abs_srcdir = /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/src
-abs_top_builddir = /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz
-abs_top_srcdir = /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz
+abs_builddir = /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/src
+abs_srcdir = /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/src
+abs_top_builddir = /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz
+abs_top_srcdir = /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -519,10 +541,10 @@ am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 ax_pthread_config = 
 bindir = ${exec_prefix}/bin
-build = i686-pc-cygwin
+build = i686-pc-mingw32
 build_alias = 
 build_cpu = i686
-build_os = cygwin
+build_os = mingw32
 build_vendor = pc
 builddir = .
 datadir = ${datarootdir}
@@ -530,15 +552,15 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = i686-pc-cygwin
+host = i686-pc-mingw32
 host_alias = 
 host_cpu = i686
-host_os = cygwin
+host_os = mingw32
 host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /cygdrive/c/Users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/install-sh
+install_sh = ${SHELL} /e/users/sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -604,11 +626,11 @@ HBHEADERS = hb.h hb-blob.h hb-buffer.h hb-common.h hb-font.h hb-set.h \
 #nodist_HBSOURCES = hb-gobject-enums.cc
 
 # Put the library together
-#export_symbols = -export-symbols harfbuzz.def
-#harfbuzz_def_dependency = harfbuzz.def
+export_symbols = -export-symbols harfbuzz.def
+harfbuzz_def_dependency = harfbuzz.def
 # Use a C linker, not C++; Don't link to libstdc++
-libharfbuzz_la_LINK = $(LINK) $(libharfbuzz_la_LDFLAGS)
-#libharfbuzz_la_LINK = $(CXXLINK) $(libharfbuzz_la_LDFLAGS)
+#libharfbuzz_la_LINK = $(LINK) $(libharfbuzz_la_LDFLAGS)
+libharfbuzz_la_LINK = $(CXXLINK) $(libharfbuzz_la_LDFLAGS)
 libharfbuzz_la_SOURCES = $(HBSOURCES) $(HBHEADERS)
 nodist_libharfbuzz_la_SOURCES = $(nodist_HBSOURCES)
 libharfbuzz_la_CPPFLAGS = $(HBCFLAGS)
@@ -789,6 +811,16 @@ main$(EXEEXT): $(main_OBJECTS) $(main_DEPENDENCIES) $(EXTRA_main_DEPENDENCIES)
 test-would-substitute$(EXEEXT): $(test_would_substitute_OBJECTS) $(test_would_substitute_DEPENDENCIES) $(EXTRA_test_would_substitute_DEPENDENCIES) 
 	@rm -f test-would-substitute$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(test_would_substitute_OBJECTS) $(test_would_substitute_LDADD) $(LIBS)
+
+# below to build complex_script_layout
+
+complex_script_layout.dll: ../../complex_script_layout_win.c
+	@rm -f complex_script_layout.dll
+	gcc -Wall -c -D_JNI_IMPLEMENTATION_ -Wl,--kill-at -I"C:/Program Files/Java/jdk1.8.0_11/include" -I"C:/Program Files/Java/jdk1.8.0_11/include/win32" \
+   -I"E:/Users/Sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/src" -I"E:/users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include"  ../../complex_script_layout_win.c
+	$(CXXLINK)  -Wl,-subsystem,windows -shared  $(FREETYPE_FILES) complex_script_layout_win.o libharfbuzz.la hb-old/libhb-old.la  hb-ucdn/libhb-ucdn.la
+
+# above to build complex_script_layout
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)

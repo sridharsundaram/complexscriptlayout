@@ -6,36 +6,38 @@ obj/local/armeabi/objs-debug/ft2/src/base/ftbase.o: \
  jni/freetype/include/freetype/config/ftconfig.h \
  jni/freetype/include/freetype/config/ftoption.h \
  jni/freetype/include/freetype/config/ftstdlib.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/limits.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/android/api-level.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/limits.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/limits.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/internal_types.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/limits.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/syslimits.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/string.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/malloc.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/stdio.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/_types.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/_types.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/types.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/stdint.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/posix_types.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/stddef.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/compiler.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/asm/posix_types.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/asm/types.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/types.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/kernel.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/stdlib.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/alloca.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/strings.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/memory.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/setjmp.h \
- C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/setjmp.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/limits.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/android/api-level.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/limits.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/limits.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/internal_types.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/limits.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/syslimits.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/asm/page.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/string.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/malloc.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/stdio.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/types.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/stdint.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/_types.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/_types.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/_wchar_limits.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/posix_types.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/stddef.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/compiler.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/asm/posix_types.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/asm/types.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/types.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/kernel.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/stdlib.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/alloca.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/strings.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/memory.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/setjmp.h \
+ E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/setjmp.h \
  jni/freetype/include/freetype/fterrors.h \
  jni/freetype/include/freetype/ftmoderr.h \
  jni/freetype/include/freetype/fterrdef.h \
@@ -101,65 +103,69 @@ jni/freetype/include/freetype/config/ftoption.h:
 
 jni/freetype/include/freetype/config/ftstdlib.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/limits.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/limits.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/cdefs.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/cdefs.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/android/api-level.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/android/api-level.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/limits.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/limits.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/limits.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/limits.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/internal_types.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/internal_types.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/limits.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/limits.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/syslimits.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/syslimits.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/string.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/asm/page.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/malloc.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/string.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/stdio.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/malloc.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/_types.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/stdio.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/_types.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/types.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/types.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/stdint.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/stdint.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/_types.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/posix_types.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/_types.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/stddef.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/_wchar_limits.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/compiler.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/posix_types.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/asm/posix_types.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/stddef.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/asm/types.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/compiler.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/linux/types.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/asm/posix_types.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/kernel.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/asm/types.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/linux/types.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/stdlib.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/kernel.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/alloca.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/strings.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/stdlib.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/memory.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/alloca.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/setjmp.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/strings.h:
 
-C:/Users/sridhar/android-ndk-r7b/platforms/android-8/arch-arm/usr/include/machine/setjmp.h:
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/memory.h:
+
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/setjmp.h:
+
+E:/Users/sridhar/android-ndk-r10/platforms/android-8/arch-arm/usr/include/machine/setjmp.h:
 
 jni/freetype/include/freetype/fterrors.h:
 
