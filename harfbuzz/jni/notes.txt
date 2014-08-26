@@ -1,0 +1,39 @@
+
+-cygwin -I$jdk/include -I$jdk/include/win32 -Wl,--add-stdcall-alias -shared -o HelloWorld.dll HelloWorld.c
+
+for MinGW
+cd E:\Users\sridhar\git\harfbuzz\harfbuzz\jni
+gcc -c -Wall -D_JNI_IMPLEMENTATION_ -Wl, --kill-at -I"C:/Program Files/Java/jdk1.8.0_11/include" -I"C:/Program Files/Java/jdk1.8.0_11/include/win32" -I"E:/Users/Sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/src" -I"E:/users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include" -shared complex_script_layout_win.c -o complex_script_layout.o
+
+# for complex script layout - freetype  
+FREETYPE_FILES:= \
+  ../../freetype/ftbbox.o \
+  ../../freetype/ftbitmap.o \
+  ../../freetype/ftfstype.o \
+  ../../freetype/ftglyph.o \
+  ../../freetype/ftlcdfil.o \
+  ../../freetype/ftstroke.o \
+  ../../freetype/fttype1.o \
+  ../../freetype/ftxf86.o \
+  ../../freetype/ftbase.o \
+  ../../freetype/ftsystem.o \
+  ../../freetype/ftinit.o \
+  ../../freetype/ftgasp.o \
+  ../../freetype/raster.o \
+  ../../freetype/sfnt.o \
+  ../../freetype/smooth.o \
+  ../../freetype/autofit.o \
+  ../../freetype/truetype.o \
+  ../../freetype/cff.o \
+  ../../freetype/psnames.o \
+  ../../freetype/pshinter.o
+
+# below to build complex_script_layout
+  
+complex_script_layout.dll: ../../complex_script_layout_win.c
+  @rm -f complex_script_layout.dll
+  gcc -Wall -c -D_JNI_IMPLEMENTATION_ -Wl,--kill-at -I"C:/Program Files/Java/jdk1.8.0_11/include" -I"C:/Program Files/Java/jdk1.8.0_11/include/win32" \
+   -I"E:/Users/Sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/src" -I"E:/users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include"  ../../complex_script_layout_win.c
+  $(CXXLINK)  -Wl,-subsystem,windows -shared  $(FREETYPE_FILES) complex_script_layout_win.o libharfbuzz.la hb-old/libhb-old.la  hb-ucdn/libhb-ucdn.la
+
+# above to build complex_script_layout
