@@ -28,7 +28,7 @@
 
 static hb_font_t *font;
 static hb_script_t script;
-
+static const jboolean DEBUG = 0;
 /**
  * initialize freetype library and fontface and language
  */
@@ -51,22 +51,22 @@ void Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniInitiali
 
     error = FT_Init_FreeType(&ft_library); /* initialize library */
     if (error) {
- //     __android_log_print(6, "jniInitialize", "Error initializing FreeType library\n");
+      fprintf(stderr, "jniInitialize: Error initializing FreeType library\n");
       return;
     }
-//    __android_log_print(2, "jniInitialize", "Successfully initialized FreeType library\n");
-//    __android_log_print(2, "jniInitialize", "fontFilePath - %s", fontFilePath);
+    fprintf(stderr, "jniInitialize: Successfully initialized FreeType library\n");
+    fprintf(stderr, "jniInitialize: fontFilePath - %s", fontFilePath);
 
     error = FT_New_Face(ft_library, fontFilePath, 0, &ft_face); /* create face object */
     (*env)->ReleaseStringUTFChars(env, jFontFilePath, fontFilePath);
     if (error == FT_Err_Unknown_File_Format) {
-//      __android_log_print(6, "jniInitialize", "Font format is not supported");
+      fprintf(stderr, "jniInitialize: Font format is not supported");
       return;
     } else if (error) {
-//      __android_log_print(6, "jniInitialize", "Font file not accessible");
+      fprintf(stderr, "jniInitialize: Font file not accessible");
       return;
     }
-//    __android_log_print(2, "jniInitialize", "Successfully created font-face object\n");
+    fprintf(stderr, "jniInitialize: Successfully created font-face object\n");
 
     font = hb_ft_font_create(ft_face, NULL);
 
@@ -114,14 +114,16 @@ jintArray Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniGet
     hb_buffer_set_script(buffer, script);
 
     /* Layout the text */
-//    __android_log_print(2, "getGlyphsAfterShaping", "Text being shaped = %s\n", text);
-    for (i = 0; i < textLen; i++) {
-//       __android_log_print(2, "getGlyphsAfterShaping", "Char%d = %x", i, text[i]);
+    fprintf(stderr, "getGlyphsAfterShaping: Text being shaped = %s\n", text);
+    if (DEBUG) {
+      for (i = 0; i < textLen; i++) {
+		fprintf(stderr, "getGlyphsAfterShaping: Char%d = %x\n", i, text[i]);
+      }
     }
     hb_buffer_add_utf16(buffer, text, textLen, 0, textLen);
-//    __android_log_print(2, "getGlyphsAfterShaping", "Before HarfBuzz shape()\n");
+    fprintf(stderr, "getGlyphsAfterShaping: Before HarfBuzz shape()\n");
     hb_shape(font, buffer, NULL, 0);
-//    __android_log_print(2, "getGlyphsAfterShaping", "After HarfBuzz shape()\n");
+    fprintf(stderr, "getGlyphsAfterShaping: After HarfBuzz shape()\n");
 
     glyph_count = hb_buffer_get_length(buffer);
     glyph_info = hb_buffer_get_glyph_infos(buffer, 0);
@@ -130,7 +132,9 @@ jintArray Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniGet
     glyphs = (jintArray)(*env)->NewIntArray(env, glyph_count); 
     for (i = 0; i < glyph_count; i++) {
       glyph_index = glyph_info[i].codepoint;
-//      __android_log_print(2, "getGlyphsAfterShaping", "Glyph%d = %x", i, glyph_index);
+      if (DEBUG) {
+        fprintf(stderr, "getGlyphsAfterShaping: Glyph%d = %x\n", i, glyph_index);
+      }
       localArrayCopy[0] = (int) glyph_index;
       (*env)->SetIntArrayRegion(env, (jintArray) glyphs, (jsize) i, (jsize) 1, (jint *) localArrayCopy);
     }

@@ -33,11 +33,11 @@ LOCAL_C_INCLUDES += \
         -I"$(LOCAL_PATH)/src" \
         -I"$(LOCAL_PATH)/../freetype/include"
 
-LOCAL_MODULE:= libharfbuzz
+LOCAL_MODULE:= harfbuzz
 
 
-libharfbuzz: $(LOCAL_SRC_FILES);
-	gcc -c $(LOCAL_CFLAGS) $(LOCAL_C_INCLUDES) $(LOCAL_SRC_FILES)
+harfbuzz: $(LOCAL_SRC_FILES);
+	gcc -c -m64 $(LOCAL_CFLAGS) $(LOCAL_C_INCLUDES) $(LOCAL_SRC_FILES)
   
 LOCAL_STATIC_LIBRARIES:= ft2
 

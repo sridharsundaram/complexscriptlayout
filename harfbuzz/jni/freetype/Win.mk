@@ -58,7 +58,7 @@ clean:
 	-rm src/pshinter/*.o
 	
 libft2: $(LOCAL_SRC_FILES);
-	gcc -c $(LOCAL_CFLAGS) $(LOCAL_C_INCLUDES) $(LOCAL_SRC_FILES)
+	gcc -c -m64 $(LOCAL_CFLAGS) $(LOCAL_C_INCLUDES) $(LOCAL_SRC_FILES)
 
 include $(BUILD_STATIC_LIBRARY)
 endif
