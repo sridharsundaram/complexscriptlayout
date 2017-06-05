@@ -138,8 +138,7 @@ hb_buffer_t::reset (void)
 {
   if (unlikely (hb_object_is_inert (this)))
     return;
-
-  hb_unicode_funcs_destroy (unicode);
+  if (unicode) hb_unicode_funcs_destroy (unicode);
   unicode = hb_unicode_funcs_get_default ();
 
   hb_segment_properties_t default_props = _HB_BUFFER_PROPS_DEFAULT;
@@ -556,7 +555,6 @@ hb_buffer_create ()
     return hb_buffer_get_empty ();
 
   buffer->reset ();
-
   return buffer;
 }
 

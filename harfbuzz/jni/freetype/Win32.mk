@@ -4,7 +4,7 @@ ifndef USE_FREETYPE
 USE_FREETYPE := 2.4.2
 endif
 
-LOCAL_PATH:=E:/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype
+LOCAL_PATH:=C:/Users/sridhar/git/complexscriptlayout/harfbuzz/jni/freetype
 
 ifeq ($(USE_FREETYPE),2.4.2)
 #LOCAL_PATH:= $(call my-dir)

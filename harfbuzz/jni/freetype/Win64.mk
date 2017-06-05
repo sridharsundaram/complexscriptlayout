@@ -4,7 +4,7 @@ ifndef USE_FREETYPE
 USE_FREETYPE := 2.4.2
 endif
 
-LOCAL_PATH:=E:/Users/sridhar/git/harfbuzz/harfbuzz/jni/freetype
+LOCAL_PATH:=C:/Users/sridhar/git/complexscriptlayout/harfbuzz/jni/freetype
 
 ifeq ($(USE_FREETYPE),2.4.2)
 #LOCAL_PATH:= $(call my-dir)
@@ -56,6 +56,7 @@ clean:
 	-rm src/cff/*.o
 	-rm src/psnames/*.o
 	-rm src/pshinter/*.o
+	-rm *.o
 	
 libft2: $(LOCAL_SRC_FILES);
 	gcc -c -m64 $(LOCAL_CFLAGS) $(LOCAL_C_INCLUDES) $(LOCAL_SRC_FILES)
