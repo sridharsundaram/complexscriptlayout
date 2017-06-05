@@ -14,6 +14,7 @@
 void __android_log_print(int level, char* scope, char *format, ...) {
 	char c[1000];
 	strcpy(c, scope);
+	strcat(c, " ");
 	strcat(c, format);
 	va_list argp;
 	va_start(argp, format);
