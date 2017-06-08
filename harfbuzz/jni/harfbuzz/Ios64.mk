@@ -4,7 +4,7 @@
 #
 
 LOCAL_CFLAGS := -DHAVE_OT -O2 -DHB_NO_UNICODE_FUNCS
-LOCAL_PATH:=~/Documents/workspace/complexscriptlayout/harfbuzz/jni/harfbuzz
+LOCAL_PATH:=/Users/sridhar/git/complexscriptlayout/harfbuzz/jni/harfbuzz
 
 LOCAL_SRC_FILES:= \
         src/hb-blob.cc \
@@ -37,7 +37,7 @@ LOCAL_MODULE:= harfbuzz
 
 
 harfbuzz: $(LOCAL_SRC_FILES);
-	gcc -c -m64 $(LOCAL_CFLAGS) $(LOCAL_C_INCLUDES) $(LOCAL_SRC_FILES)
+	$(COMPILER) -c -m64 $(LOCAL_CFLAGS) $(LOCAL_C_INCLUDES) $(LOCAL_SRC_FILES)
 
 clean:
 	-rm *.o
