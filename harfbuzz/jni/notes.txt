@@ -1,40 +1,18 @@
+#install ndk
+#ndk directory is
+#C:\Users\sridhar\AppData\Local\Android\sdk\ndk-bundle
 
--cygwin -I$jdk/include -I$jdk/include/win32 -Wl,--add-stdcall-alias -shared -o HelloWorld.dll HelloWorld.c
+#Open cmd terminal
+# cd to directory in which Application.mk is
+cd c:\users\sridhar\git\complexscriptlayout\harfbuzz\jni
+# run build
+C:\Users\sridhar\AppData\Local\Android\sdk\ndk-bundle\ndk-build
+# output is in libs directory (at same level as jni)
 
-for MinGW
-cd E:\Users\sridhar\git\harfbuzz\harfbuzz\jni
-gcc -c -Wall -D_JNI_IMPLEMENTATION_ -Wl, --kill-at -I"C:/Program Files/Java/jdk1.8.0_11/include" -I"C:/Program Files/Java/jdk1.8.0_11/include/win32" -I"E:/Users/Sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/src" -I"E:/users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include" -shared complex_script_layout_win.c -o complex_script_layout.o
-
-NOT USED 5 june 2017
-# for complex script layout - freetype  
-FREETYPE_FILES:= \
-  ../../freetype/ftbbox.o \
-  ../../freetype/ftbitmap.o \
-  ../../freetype/ftfstype.o \
-  ../../freetype/ftglyph.o \
-  ../../freetype/ftlcdfil.o \
-  ../../freetype/ftstroke.o \
-  ../../freetype/fttype1.o \
-  ../../freetype/ftxf86.o \
-  ../../freetype/ftbase.o \
-  ../../freetype/ftsystem.o \
-  ../../freetype/ftinit.o \
-  ../../freetype/ftgasp.o \
-  ../../freetype/raster.o \
-  ../../freetype/sfnt.o \
-  ../../freetype/smooth.o \
-  ../../freetype/autofit.o \
-  ../../freetype/truetype.o \
-  ../../freetype/cff.o \
-  ../../freetype/psnames.o \
-  ../../freetype/pshinter.o
-
-# below to build complex_script_layout
-  
-complex_script_layout.dll: ../../complex_script_layout_win.c
-  @rm -f complex_script_layout.dll
-  gcc -Wall -c -D_JNI_IMPLEMENTATION_ -Wl,--kill-at -I"C:/Program Files/Java/jdk1.8.0_11/include" -I"C:/Program Files/Java/jdk1.8.0_11/include/win32" \
-   -I"E:/Users/Sridhar/git/harfbuzz/harfbuzz/jni/harfbuzz/src" -I"E:/users/sridhar/git/harfbuzz/harfbuzz/jni/freetype/include"  ../../complex_script_layout_win.c
-  $(CXXLINK)  -Wl,-subsystem,windows -shared  $(FREETYPE_FILES) complex_script_layout_win.o libharfbuzz.la hb-old/libhb-old.la  hb-ucdn/libhb-ucdn.la
-
-# above to build complex_script_layout
+# For Win 64 Build
+# Open msys terminal c:\msys\msys.bat
+# cd to directory in which Application.mk is
+cd c:/users/sridhar/git/complexscriptlayout/harfbuzz/jni
+# run build
+make -f Win64.mk
+# output is complex_script_layout.jar in same directory

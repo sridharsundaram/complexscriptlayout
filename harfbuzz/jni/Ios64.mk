@@ -2,14 +2,12 @@
 
 
 LOCAL_STATIC_LIBRARIES := ft2 harfbuzz
-LOCAL_PATH:=C:/Users/Sridhar/git/complexscriptlayout/harfbuzz/jni
-JAVA_HOME:="C:/Program\ Files/Java/jdk1.8.0_111"
+LOCAL_PATH:=~/Documents/workspace/complexscriptlayout/harfbuzz/jni
 LOCAL_C_INCLUDES = \
         -I"$(JAVA_HOME)/include" \
-        -I"$(JAVA_HOME)/include/win32" \
         -I"$(LOCAL_PATH)/harfbuzz/src" \
         -I"$(LOCAL_PATH)/freetype/include" \
-        -I"$(LOCAL_PATH)"
+        -I"$(LOCAL_PATH)
 
 complex_script_layout: complex_script_layout.c
 	@rm -f complex_script_layout.dll
