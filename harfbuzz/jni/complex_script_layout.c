@@ -53,7 +53,9 @@ void Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniInitiali
     if (font == NULL) {
     	error = FT_Init_FreeType(&ft_library); /* initialize library */
 		if (error) {
+#ifdef DEBUG
 		  __android_log_print(ANDROID_LOG_ERROR, "jniInitialize", "Error initializing FreeType library\n");
+#endif
 		  return;
 		}
 		font = (hb_font_t **)malloc(sizeof(hb_font_t *) * MAX_FONTS);
@@ -68,27 +70,37 @@ void Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniInitiali
     	}
     	if (fontFilePaths[i] != NULL) {
     		// Already allocated - initialization not required
+#ifdef DEBUG
   		    __android_log_print(ANDROID_LOG_WARN, "jniInitialize", "Already initialized %s\n", fontFilePath);
+#endif
     	    (*env)->ReleaseStringUTFChars(env, jLanguage, language);
     	    (*env)->ReleaseStringUTFChars(env, jFontFilePath, fontFilePath);
     		return;
     	}
     }
     fontFilePaths[i] = fontFilePath;
+#ifdef DEBUG
     __android_log_print(ANDROID_LOG_DEBUG, "jniInitialize", "Successfully initialized FreeType library\n");
     __android_log_print(ANDROID_LOG_DEBUG, "jniInitialize", "fontFilePath - %s\n", fontFilePath);
+#endif
 
     error = FT_New_Face(ft_library, fontFilePath, 0, &ft_face); /* create face object */
     if (error == FT_Err_Unknown_File_Format) {
+#ifdef DEBUG
       __android_log_print(ANDROID_LOG_ERROR, "jniInitialize", "Font format is not supported\n");
+#endif
       return;
     } else if (error) {
+#ifdef DEBUG
       __android_log_print(ANDROID_LOG_ERROR, "jniInitialize", "Font file not accessible");
+#endif
       return;
     }
 
     font[i] = hb_ft_font_create(ft_face, NULL);
+#ifdef DEBUG
     __android_log_print(ANDROID_LOG_INFO, "jniInitialize", "Successfully created font-face object\n");
+#endif
 
     //hb_buffer_set_unicode_funcs(buffer, hb_icu_get_unicode_funcs());
     //alternatively you can use hb_buffer_set_unicode_funcs(buffer, hb_glib_get_unicode_funcs());
@@ -131,10 +143,12 @@ jintArray Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniGet
 	for (fontIdx = 0; fontIdx < MAX_FONTS; fontIdx++) {
 		if (!strcmp(fontFilePaths[fontIdx], fontFilePath)) break;
     }
+#ifdef DEBUG
     __android_log_print(ANDROID_LOG_INFO, "getGlyphsAfterShaping", "fontFilePaths = %d %s\n", fontIdx, fontFilePaths[fontIdx]);
     if (font[fontIdx] == NULL) {
         __android_log_print(ANDROID_LOG_ERROR, "getGlyphsAfterShaping", "font is null %d\n", fontIdx);
     }
+#endif
     text = (*env)->GetStringChars(env, jUnicodeText, &iscopy);
     textLen = (*env)->GetStringLength(env, jUnicodeText);
 
@@ -143,14 +157,20 @@ jintArray Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniGet
     hb_buffer_set_script(buffer, script);
 
     /* Layout the text */
+#ifdef DEBUG
     __android_log_print(ANDROID_LOG_INFO, "getGlyphsAfterShaping", "Text being shaped = %s\n", text);
     for (i = 0; i < textLen; i++) {
        __android_log_print(ANDROID_LOG_VERBOSE, "", ",%x", i, text[i]);
     }
+#endif
     hb_buffer_add_utf16(buffer, text, textLen, 0, textLen);
+#ifdef DEBUG
     __android_log_print(ANDROID_LOG_INFO, "getGlyphsAfterShaping", "\nBefore HarfBuzz shape()\n");
+#endif
     hb_shape(font[fontIdx], buffer, NULL, 0);
+#ifdef DEBUG
     __android_log_print(ANDROID_LOG_INFO, "getGlyphsAfterShaping", "After HarfBuzz shape()\n");
+#endif
 
     glyph_count = hb_buffer_get_length(buffer);
     glyph_info = hb_buffer_get_glyph_infos(buffer, 0);
@@ -163,7 +183,9 @@ jintArray Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniGet
       localArrayCopy[0] = (int) glyph_index;
       (*env)->SetIntArrayRegion(env, glyphs, (jsize) i, (jsize) 1, (jint *) localArrayCopy);
     }
+#ifdef DEBUG
     __android_log_print(ANDROID_LOG_INFO, "getGlyphsAfterShaping", "releasing memory\n");
+#endif
 
     hb_buffer_destroy(buffer);
 
