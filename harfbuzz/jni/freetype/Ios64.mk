@@ -4,6 +4,20 @@ ifndef USE_FREETYPE
 USE_FREETYPE := 2.4.2
 endif
 
+PLATFORM_SIM:="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk"
+PLATFORM_MAC:="/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSC10.10.sdk"
+PLATFORM_IOS:="/Applications/XCode.app/Contents/Developer/Platforms/IPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk"
+
+ARCH:=x64
+ARCH:=thumbv7
+ARCH:=arm64
+LOCAL_C_INCLUDES = \
+	-I"$(LOCAL_PATH)/freetype/include" \
+	-I"$(LOCAL_PATH)/freetype/builds" \
+	-I"$(PLATFORM_SIM)/usr/include" 
+	
+COMPILER:=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -ferror-limit=1000
+
 LOCAL_PATH:=/Users/sridhar/git/complexscriptlayout/harfbuzz/jni/freetype
 
 ifeq ($(USE_FREETYPE),2.4.2)
@@ -31,10 +45,6 @@ LOCAL_SRC_FILES:= \
 	src/cff/cff.c \
 	src/psnames/psnames.c \
 	src/pshinter/pshinter.c
-
-LOCAL_C_INCLUDES += \
-	-I"$(LOCAL_PATH)/builds" \
-	-I"$(LOCAL_PATH)/include"
 
 LOCAL_CFLAGS += -W -Wall
 LOCAL_CFLAGS += -DPIC

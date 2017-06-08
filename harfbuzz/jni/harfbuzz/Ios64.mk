@@ -6,6 +6,20 @@
 LOCAL_CFLAGS := -DHAVE_OT -O2 -DHB_NO_UNICODE_FUNCS
 LOCAL_PATH:=/Users/sridhar/git/complexscriptlayout/harfbuzz/jni/harfbuzz
 
+PLATFORM_SIM:="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk"
+PLATFORM_MAC:="/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSC10.10.sdk"
+PLATFORM_IOS:="/Applications/XCode.app/Contents/Developer/Platforms/IPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk"
+
+ARCH:=x64
+ARCH:=thumbv7
+ARCH:=arm64
+LOCAL_C_INCLUDES = \
+	-I"$(LOCAL_PATH)/harfbuzz/src" \
+	-I"$(LOCAL_PATH)/freetype/include" \
+	-I"$(PLATFORM_SIM)/usr/include" 
+	
+COMPILER:=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -ferror-limit=1000
+
 LOCAL_SRC_FILES:= \
         src/hb-blob.cc \
         src/hb-buffer.cc \
@@ -30,8 +44,7 @@ LOCAL_SRC_FILES:= \
         src/hb-unicode.cc
 
 LOCAL_C_INCLUDES += \
-        -I"$(LOCAL_PATH)/src" \
-        -I"$(LOCAL_PATH)/../freetype/include"
+        -I"$(LOCAL_C_INCLUDES"
 
 LOCAL_MODULE:= harfbuzz
 
