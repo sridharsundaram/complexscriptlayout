@@ -16,3 +16,7 @@ cd c:/users/sridhar/git/complexscriptlayout/harfbuzz/jni
 # run build
 make -f Win64.mk
 # output is complex_script_layout.jar in same directory
+
+#Mac
+xcodebuild -showsdks
+xcodebuild -configuration Release -target sns -sdk iphonesimulator10.3 clean build RUN_CLANG_STATIC_ANALYZER=NO

@@ -4,21 +4,24 @@ ifndef USE_FREETYPE
 USE_FREETYPE := 2.4.2
 endif
 
+LOCAL_PATH:=/Users/sridhar/git/complexscriptlayout/harfbuzz/jni/freetype
+
 PLATFORM_SIM:="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk"
 PLATFORM_MAC:="/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSC10.10.sdk"
 PLATFORM_IOS:="/Applications/XCode.app/Contents/Developer/Platforms/IPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk"
 
-ARCH:=x64
-ARCH:=thumbv7
-ARCH:=arm64
-LOCAL_C_INCLUDES = \
-	-I"$(LOCAL_PATH)/freetype/include" \
-	-I"$(LOCAL_PATH)/freetype/builds" \
-	-I"$(PLATFORM_SIM)/usr/include" 
-	
-COMPILER:=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -ferror-limit=1000
+ARCH:=armv7s
+ARCH:=armv7
+ARCH:=i386
 
-LOCAL_PATH:=/Users/sridhar/git/complexscriptlayout/harfbuzz/jni/freetype
+sdk:=iPhoneOS
+sdk:=iPhoneSimulator
+
+LOCAL_C_INCLUDES = \
+	-I"$(LOCAL_PATH)/include" \
+	-I"$(LOCAL_PATH)/builds" 
+	
+COMPILER:=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -ferror-limit=1000 -arch $(ARCH)
 
 ifeq ($(USE_FREETYPE),2.4.2)
 #LOCAL_PATH:= $(call my-dir)
@@ -50,6 +53,7 @@ LOCAL_CFLAGS += -W -Wall
 LOCAL_CFLAGS += -DPIC
 #LOCAL_CFLAGS += "-DDARWIN_NO_CARBON"
 LOCAL_CFLAGS += "-DFT2_BUILD_LIBRARY"
+LOCAL_CFLAGS += -isysroot $(PLATFORM_SIM) -miphoneos-version-min=8.0
 
 # the following is for testing only, and should not be used in final builds
 # of the product
