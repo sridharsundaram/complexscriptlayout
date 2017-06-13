@@ -5,17 +5,9 @@ USE_FREETYPE := 2.4.2
 endif
 
 LOCAL_PATH:=/Users/sridhar/git/complexscriptlayout/harfbuzz/jni/freetype
-
-PLATFORM_SIM:="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk"
-PLATFORM_MAC:="/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSC10.10.sdk"
-PLATFORM_IOS:="/Applications/XCode.app/Contents/Developer/Platforms/IPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk"
-
-ARCH:=armv7s
-ARCH:=armv7
-ARCH:=i386
-
-sdk:=iPhoneOS
-sdk:=iPhoneSimulator
+LOCAL_CFLAGS += -W -Wall -fno-exceptions 
+#LOCAL_CFLAGS += "-DDARWIN_NO_CARBON"
+LOCAL_CFLAGS += "-DFT2_BUILD_LIBRARY" -isysroot $(PLATFORM)
 
 LOCAL_C_INCLUDES = \
 	-I"$(LOCAL_PATH)/include" \
@@ -49,11 +41,6 @@ LOCAL_SRC_FILES:= \
 	src/psnames/psnames.c \
 	src/pshinter/pshinter.c
 
-LOCAL_CFLAGS += -W -Wall
-LOCAL_CFLAGS += -DPIC
-#LOCAL_CFLAGS += "-DDARWIN_NO_CARBON"
-LOCAL_CFLAGS += "-DFT2_BUILD_LIBRARY"
-LOCAL_CFLAGS += -isysroot $(PLATFORM_SIM) -miphoneos-version-min=8.0
 
 # the following is for testing only, and should not be used in final builds
 # of the product
@@ -73,7 +60,7 @@ clean:
 	-rm *.o
 	
 libft2: $(LOCAL_SRC_FILES);
-	$(COMPILER) -c -m64 $(LOCAL_CFLAGS) $(LOCAL_C_INCLUDES) $(LOCAL_SRC_FILES)
+	$(COMPILER) -c $(LOCAL_CFLAGS) $(LOCAL_C_INCLUDES) $(LOCAL_SRC_FILES)
 
 include $(BUILD_STATIC_LIBRARY)
 endif
