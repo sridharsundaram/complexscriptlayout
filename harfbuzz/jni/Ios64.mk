@@ -17,7 +17,7 @@ complex_script_layout: complex_script_layout.c
 #	cd freetype; make -f Ios64.mk libft2; cd ..
 	cd harfbuzz; make -f Ios64.mk harfbuzz; cd ..
 	$(COMPILER) $(LOCAL_CFLAGS) $(LOCAL_C_INCLUDES) -isysroot $(PLATFORM) complex_script_layout.c
-	libtool -static -o libcomplex_script_layout.a harfbuzz/*.o *.o
+	libtool -static -o libcomplex_script_layout$(ARCH).a harfbuzz/*.o *.o
 #	$(LINKER) -rcs libcomplex_script_layout.a freetype/*.o harfbuzz/*.o *.o
 #	$(COMPILER) -Wall -D_JNI_IMPLEMENTATION_ -Wl -v -isysroot $(PLATFORM) -o libcomplex_script_layout.a freetype/*.o harfbuzz/*.o complex_script_layout.o
 
