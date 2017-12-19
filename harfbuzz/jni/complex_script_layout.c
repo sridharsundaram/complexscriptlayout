@@ -117,9 +117,9 @@ JNIEXPORT jintArray JNICALL Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexS
 		  if (!strcmp(fontFilePaths[fontIdx], fontFilePath)) break;
     }
     if (fontIdx == MAX_FONTS) fontIdx = 0;
-    __android_log_print(LOG_LEVEL, "getGlyphsAfterShaping", "fontFilePaths = %d %s\n", fontIdx, fontFilePaths[fontIdx]);
+    __android_log_print(LOG_LEVEL, "getGlyphsForText", "fontFilePaths = %d %s\n", fontIdx, fontFilePaths[fontIdx]);
     if (font[fontIdx] == NULL) {
-        __android_log_print(ANDROID_LOG_ERROR, "getGlyphsAfterShaping", "font is null %d\n", fontIdx);
+        __android_log_print(ANDROID_LOG_ERROR, "getGlyphsForText", "font is null %d\n", fontIdx);
     }
     text = (*env)->GetStringChars(env, jUnicodeText, &iscopy);
     textLen = (*env)->GetStringLength(env, jUnicodeText);
@@ -129,27 +129,27 @@ JNIEXPORT jintArray JNICALL Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexS
     hb_buffer_set_script(buffer, script);
 
     /* Layout the text */
-    __android_log_print(LOG_LEVEL, "getGlyphsAfterShaping", "Text being shaped = %s\n", text);
+    __android_log_print(LOG_LEVEL, "getGlyphsForText", "Text being shaped = %s\n", text);
     for (i = 0; i < textLen; i++) {
-       __android_log_print(LOG_LEVEL, "", ",%x %x", i, text[i]);
+       __android_log_print(LOG_LEVEL, "", ",%d %x", i, text[i]);
     }
     hb_buffer_add_utf16(buffer, text, textLen, 0, textLen);
-    __android_log_print(LOG_LEVEL, "getGlyphsAfterShaping", "\nBefore HarfBuzz shape()\n");
+    __android_log_print(LOG_LEVEL, "getGlyphsForText", "\nBefore HarfBuzz shape()\n");
     hb_shape(font[fontIdx], buffer, NULL, 0);
-    __android_log_print(LOG_LEVEL, "getGlyphsAfterShaping", "After HarfBuzz shape()\n");
+    __android_log_print(LOG_LEVEL, "getGlyphsForText", "After HarfBuzz shape()\n");
 
     glyph_count = hb_buffer_get_length(buffer);
     glyph_info = hb_buffer_get_glyph_infos(buffer, 0);
     glyph_pos = hb_buffer_get_glyph_positions(buffer, 0);
 
-    glyphs = (jintArray)(*env)->NewIntArray(env, glyph_count); 
+    glyphs = (jintArray)(*env)->NewIntArray(env, glyph_count);
     for (i = 0; i < glyph_count; i++) {
       glyph_index = glyph_info[i].codepoint;
-      __android_log_print(ANDROID_LOG_VERBOSE, "", ",%x", i, glyph_index);
+      __android_log_print(LOG_LEVEL, "", ",%d %x", i, glyph_index);
       localArrayCopy[0] = (int) glyph_index;
       (*env)->SetIntArrayRegion(env, glyphs, (jsize) i, (jsize) 1, (jint *) localArrayCopy);
     }
-    __android_log_print(LOG_LEVEL, "getGlyphsAfterShaping", "releasing memory\n");
+    __android_log_print(LOG_LEVEL, "getGlyphsForText", "\nreleasing memory\n");
 
     hb_buffer_destroy(buffer);
 

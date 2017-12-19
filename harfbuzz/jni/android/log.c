@@ -19,5 +19,6 @@ void __android_log_print(int level, char* scope, char *format, ...) {
 	va_list argp;
 	va_start(argp, format);
 	vfprintf(stderr, c, argp);
+	fflush(stderr);
 	va_end(argp);
 }
