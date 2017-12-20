@@ -4,7 +4,8 @@
 #ARCH=armv7s
 #ARCH=armv7
 #ARCH=x86_64
-for ARCH in i386 x86_64
+#for ARCH in i386 x86_64
+for ARCH in armv7s armv7
 do
   export ARCH
   echo $ARCH
