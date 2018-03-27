@@ -1,11 +1,6 @@
 #!/bin/sh
 
-#ARCH=i386
-#ARCH=armv7s
-#ARCH=armv7
-#ARCH=x86_64
-#for ARCH in i386 x86_64
-for ARCH in armv7s armv7
+for ARCH in armv7s armv7 i386 x86_64
 do
   export ARCH
   echo $ARCH
@@ -35,5 +30,3 @@ do
 done
 
 lipo libcomplex_script_layoutarmv7.a libcomplex_script_layoutarmv7s.a libcomplex_script_layouti386.a libcomplex_script_layoutx86_64.a -output libcomplex_script_layout.a -create
-#lipo libcomplex_script_layoutarmv7.a libcomplex_script_layoutarmv7s.a libcomplex_script_layoutx86_64.a -output libcomplex_script_layout.a -create
-#mv libcomplex_script_layoutx$(ARCH).a libcomplex_script_layout.a

@@ -1,0 +1,433 @@
+group "org.harfbuzz"
+
+apply plugin: "maven"
+
+String gitVersion
+if (hasProperty("release")) {
+	gitVersion = [ "git", "describe", "--match", "[0-9]*", "--dirty"].execute().text.trim()
+} else {
+	gitVersion = [ "git", "describe", "--match", "[0-9]*", "--abbrev=0"].execute().text.trim() + "-SNAPSHOT"
+}
+
+def harfbuzzDir = file("harfbuzz")
+def harfbuzzVersion = [ "git", "describe", "--abbrev=0" ].execute(null, harfbuzzDir).text.trim()
+version = harfbuzzVersion + "-" + gitVersion
+
+task wrapper(type: Wrapper) {
+	gradleVersion = "2.0"
+}
+
+def emscriptenVersion = "1.27.0"
+def emscriptenDir = file("emsdk/emscripten/${emscriptenVersion}")
+def nodeVersion = "0.10.18_64bit"
+def nodeDir = file("emsdk/node/${nodeVersion}/bin")
+
+task cleanHarfBuzz << {
+	if (file("${harfbuzzDir}/Makefile").exists()) {
+		def proc = "make clean".execute(null, harfbuzzDir)
+		proc.waitForProcessOutput(System.out, System.err)
+		if (proc.exitValue()) {
+			throw new RuntimeException("HarfBuzz clean failed")
+		}
+	}
+	delete "config.h"
+}
+
+clean {
+	dependsOn cleanHarfBuzz
+}
+
+task installEmscriptenSdk(type: Exec) {
+//	commandLine "./install-emsdk.sh", "sdk-${emscriptenVersion}-64bit"
+    commandLine "pwd"
+}
+
+task installNpmPackages(type:Exec) {
+	dependsOn installEmscriptenSdk
+	inputs.file "package.json"
+	commandLine "${nodeDir}/npm", "install"
+}
+
+task compileJsConnector(type: CompileCoffee) {
+	dependsOn installNpmPackages
+	nodePath = nodeDir
+	srcDir = file("src/main/coffee")
+	outputDir = file("${project.buildDir}/compiled-coffee")
+}
+
+task generateUcdnJs {
+	def input = file("${harfbuzzDir}/src/hb-ucdn/ucdn.h")
+	def output = file("${project.buildDir}/ucdn.js")
+	ext.dest = output
+	inputs.file input
+	outputs.file output
+
+	doLast {
+		output.parentFile.mkdirs()
+		output.delete()
+		output.withWriter { writer ->
+			input.withReader { reader ->
+				while (true) {
+					def line = reader.readLine()
+					if (line == null) break
+					def matches = line =~ /#define (UCDN_[A-Z0-9_]+) (\d+)/
+					if (matches) {
+						def name = matches[0][1]
+						def value = matches[0][2]
+						writer.println "Module[\"${name}\"] = ${value};"
+					}
+				}
+			}
+		}
+	}
+}
+
+task combineJsConnector {
+    dependsOn compileJsConnector
+    dependsOn generateUcdnJs
+    def output = file("${buildDir}/post.js")
+    outputs.file output
+    ext.dest = output
+    inputs.dir compileJsConnector.outputDir
+    inputs.file generateUcdnJs.dest
+
+    doLast {
+    	delete(output)
+    	output << file("${compileJsConnector.outputDir}/connector.js").text
+    	output << file("${compileJsConnector.outputDir}/hb-js.js").text
+    	output << generateUcdnJs.dest.text
+    }
+}
+
+task configureHarfbuzz(type: Exec) {
+	dependsOn installEmscriptenSdk
+
+	inputs.file "${harfbuzzDir}/configure.ac"
+	outputs.file "${harfbuzzDir}/config.h"
+	outputs.file "${harfbuzzDir}/Makefile"
+
+	environment PATH: "${projectDir}/python2" + File.pathSeparator + System.getenv().get("PATH")
+
+	commandLine "${emscriptenDir}/emconfigure", "./autogen.sh",
+		"--with-glib=no",
+		"--with-gobject=no",
+		"--with-cairo=no",
+		"--with-icu=no",
+		"--with-graphite2=no",
+		"--with-freetype=yes",
+		"--with-uniscribe=no",
+		"--with-coretext=no",
+		// We need to do this to build shared libs
+		"--host", "i386-linux"
+	workingDir harfbuzzDir
+
+	doLast {
+		for (outputFile in outputs.getFiles()) {
+			if (!outputFile.exists()) {
+				throw new RuntimeException("Emscripten configuration didn't create required file: " + outputFile)
+			}
+		}
+	}
+}
+
+task makeHarfbuzz(type: Exec) {
+	dependsOn configureHarfbuzz
+
+	environment PATH: "${projectDir}/python2" + File.pathSeparator + System.getenv().get("PATH")
+
+	commandLine "${emscriptenDir}/emmake", "make", "all-recursive"
+	workingDir harfbuzzDir
+}
+
+def EXPORTED_FUNCTIONS = []
+file("src/main/emscripten/exports.txt").eachLine { line ->
+	if (line.startsWith("#") || !line.trim()) {
+		return;
+	}
+	EXPORTED_FUNCTIONS += "_${line}"
+}
+
+def DEAD_FUNCTIONS = [
+	'_mprotect',
+]
+
+task compileEmccProduction(type: CompileEmcc) {
+	dependsOn combineJsConnector
+	dependsOn makeHarfbuzz
+
+	type = ""
+	asmJs = true
+	closure = false
+}
+
+task compileEmccDebug(type: CompileEmcc) {
+	dependsOn combineJsConnector
+	dependsOn makeHarfbuzz
+
+	type = "-debug"
+	asmJs = true
+	debug = true
+	closure = false
+}
+
+tasks.withType(CompileEmcc) {
+	emccPath = "${emscriptenDir}/emcc"
+	source "${harfbuzzDir}/src/.libs/libharfbuzz.so"
+	source "${harfbuzzDir}/src/hb-ucdn/.libs/libhb-ucdn.a"
+	postJs = combineJsConnector.dest
+	allowMemoryGrowth = true
+	memoryInitFile = false
+	reservedFunctionPointers = 1024
+	totalMemory = 64 * 1024 * 1024
+	optimizationLevel = 2
+	exportedFunctions = EXPORTED_FUNCTIONS
+	deadFunctions = DEAD_FUNCTIONS
+	outputFile = file("${buildDir}/emcc/harfbuzz${type}.js")
+}
+
+task combineJsForTest {
+    dependsOn compileEmccDebug
+    def output = file("${buildDir}/harfbuzz-test.js");
+    outputs.file output
+    ext.dest = output
+    inputs.file compileEmccDebug.outputFile
+
+    doLast {
+    	delete(output)
+		output << file("src/test/js/harfbuzz-test-pre.js").text
+		output << compileEmccDebug.outputFile.text
+		output << file("src/test/js/harfbuzz-test-post.js").text
+	}
+}
+
+task testJs(type:Exec) {
+	dependsOn installNpmPackages
+	dependsOn combineJsForTest
+
+	environment PATH: "${nodeDir}" + File.pathSeparator + System.getenv().get("PATH")
+
+	commandLine "node_modules/mocha/bin/mocha", "--compilers", "coffee:coffee-script/register", "-R", "spec",
+		"src/test/coffee/*.coffee"
+}
+
+task test {
+	dependsOn testJs
+}
+
+task check {
+	dependsOn test
+}
+
+task build {
+	dependsOn assemble, check
+}
+
+artifacts {
+	archives(compileEmccProduction.outputFile) {
+		name project.name
+		type "js"
+		builtBy compileEmccProduction
+	}
+	archives(compileEmccDebug.outputFile) {
+		name project.name
+		type "js"
+		classifier "debug"
+		builtBy compileEmccDebug
+	}
+}
+
+uploadArchives {
+	dependsOn check
+	repositories {
+		if (hasProperty("nexusUser") && hasProperty("nexusPassword")) {
+			ivy {
+				if (hasProperty("release")) {
+					url "https://artifactory.prezi.com/prezi-client-release-local"
+				} else {
+					url "https://artifactory.prezi.com/prezi-client-snapshot-local"
+				}
+				layout "maven"
+				credentials {
+					username = property("nexusUser")
+					password = property("nexusPassword")
+				}
+			}
+		}
+	}
+}
+
+class CompileEmcc extends SourceTask {
+    @OutputFile
+    File outputFile
+
+    String emccPath
+
+    @Optional
+    @InputFile
+    File preJs
+
+    @Optional
+    @InputFile
+	File postJs
+
+    @Input
+	String type = ""
+
+    @Input
+	List<String> exportedFunctions = new ArrayList<String>()
+
+    @Input
+	List<String> deadFunctions = new ArrayList<String>()
+
+	@Input
+	int reservedFunctionPointers = 0
+
+	@Input
+	int totalMemory = 16 * 1024 * 1024
+
+	@Input
+	int optimizationLevel = 0
+
+	@Input
+	boolean closure = false
+
+	@Input
+	boolean allowMemoryGrowth = true
+
+	@Input
+	boolean debug = false
+
+	@Input
+	boolean memoryInitFile = false
+
+	@Input
+	boolean asmJs = false
+
+
+	@TaskAction
+	void doCompile() {
+		def emccVersion = "${emccPath} --version | perl -pe 's/emcc \\(Emscripten GCC-like replacement\\) (\\d+(?:\\.\\d+)*) \\(commit ([0-9a-f]+)\\)/\$1-\$2/'".execute().text.split("\n")[0].trim()
+		logger.info "Compiling with ${emccVersion}"
+
+		def versionHeader = project.file("${project.buildDir}/version-header.js")
+		versionHeader.delete()
+		versionHeader.createNewFile()
+		versionHeader << "Module['version'] = '${project.version}${type}';\n";
+		versionHeader << "Module['emccVersion'] = '${emccVersion}';\n";
+
+		def commandLine = [ emccPath ]
+		commandLine.addAll source.files
+
+		if (debug) commandLine.add "-g"
+
+		if (preJs != null) commandLine.addAll "--pre-js", preJs
+		if (postJs != null) commandLine.addAll "--post-js", postJs
+		commandLine.addAll "--post-js", versionHeader
+
+
+		commandLine.addAll "-o", outputFile
+
+		commandLine.add "-O" + optimizationLevel
+
+		commandLine.addAll "--closure", (closure ? 1 : 0)
+		
+		commandLine.addAll "--js-library", "harfbuzz/ft_integration.js"
+
+		commandLine.addAll "--memory-init-file", (memoryInitFile ? 1 : 0)
+
+		commandLine.addAll "-s", "ALLOW_MEMORY_GROWTH=" + (allowMemoryGrowth ? 1 : 0)
+
+		commandLine.addAll "-s", "ASM_JS=" + (asmJs ? 1 : 0)
+
+		commandLine.addAll "-s", "RESERVED_FUNCTION_POINTERS=" + reservedFunctionPointers
+
+		commandLine.addAll "-s", "TOTAL_MEMORY=" + totalMemory
+
+		commandLine.addAll "-s", "GLOBAL_BASE=" + 16777216
+
+//		commandLine.addAll "-s", "EXPORT_NAME=" + "'Harfbuzz'"
+
+//		commandLine.addAll "-s", "MODULARIZE=" + 1
+
+   		if (exportedFunctions != null && exportedFunctions.size() > 0) {
+			commandLine.addAll "-s", "EXPORTED_FUNCTIONS=['" + exportedFunctions.join("','") + "']";
+		}
+
+		if (deadFunctions != null && deadFunctions.size() > 0) {
+			commandLine.addAll "-s", "DEAD_FUNCTIONS=['" + deadFunctions.join("','") + "']";
+		}
+
+		logger.info("Executing: ${commandLine.join(" ")}")
+
+		def proc = commandLine.execute(
+			[
+				"PATH=${project.projectDir}/python2" + File.pathSeparator + System.getenv().get("PATH")
+			],
+			project.projectDir
+		)
+		proc.waitForProcessOutput(System.out, System.err)
+
+		if (proc.exitValue()) {
+			throw new RuntimeException("Emscripten build failed")
+		}
+	}
+}
+
+public class CompileCoffee extends DefaultTask
+{
+	def srcDir = "src/coffee"
+
+	def outputDir = "${project.buildDir}/compiled-coffee"
+
+	File nodePath
+
+	@InputDirectory
+	File getSrcDir() { project.file(srcDir) }
+	def setSrcDir(File srcDir) { this.srcDir = srcDir }
+
+	@OutputDirectory
+	File getOutputDir() { project.file(outputDir) }
+	def setOutputDir(File outputDir) { this.outputDir = outputDir }
+
+	@TaskAction
+	void doCompile() {
+		logger.info "Compiling CoffeeScript sources from $srcDir into $outputDir"
+
+		def outputDirFile = getOutputDir()
+		// Recursively delete output directory if it exists
+		outputDirFile.deleteDir()
+
+		def tree = project.fileTree srcDir, {
+			include '**/*.coffee'
+		}
+
+		tree.visit { visit ->
+			if (visit.directory) return
+
+			def inputFile = visit.file
+			def inputPath = visit.path
+			def outputPath = inputPath.replaceAll(/\.coffee$/, '.js')
+			def outputFile = new File(outputDirFile, outputPath)
+
+			logger.info "Compiling ${inputPath} to ${outputFile.absolutePath}"
+
+			outputFile.parentFile.mkdirs()
+
+			FileOutputStream fos = new FileOutputStream(outputFile)
+
+			def proc = ["${project.projectDir}/node_modules/.bin/coffee", "-cb", "-p", "${inputFile.absolutePath}"].execute(
+				[
+					"PATH=${nodePath}" + File.pathSeparator + System.getenv().get("PATH")
+				],
+				project.projectDir
+			)
+			proc.consumeProcessOutput(fos, System.out)
+			proc.waitFor()
+			fos.close()
+
+			if (proc.exitValue()) {
+				throw new RuntimeException("CoffeeScript build failed")
+			}
+		}
+	}
+}
