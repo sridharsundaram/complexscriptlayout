@@ -20,3 +20,16 @@ make -f Win64.mk
 #Mac
 xcodebuild -showsdks
 xcodebuild -configuration Release -target sns -sdk iphonesimulator10.3 clean build RUN_CLANG_STATIC_ANALYZER=NO
+
+#Javascript
+1. Use emscripten to compile to JS
+a) project is harfbuzz-js
+b) freetype must be changed to yes in build.gradle
+c) pkgconfig must be installed, freetype must be installed
+d) export PKG_CONFIG_PATH=/usr/local/cellular/freetype/2.9/lib/pkgconfig/freetype2.pc
+e) modify harfbuzz/Makefile.sridhar and harfbuzz/configure.sridhar manually to add have_freetype, freetype include and freetype lib paths
+f) src/main/emscripten/exports.txt --> add hb-ft
+g) add js_library for integration of ft functions
+h) ./gradlew assemble
+i) port back build/emcc/harfbuzz.js, harfbuzz-debug.js
+j) add encapsulation and memory directive at bottom
