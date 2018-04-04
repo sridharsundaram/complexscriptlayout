@@ -13,10 +13,10 @@ LOCAL_C_INCLUDES = \
 
 complex_script_layout: complex_script_layout.c
 	@rm -f complex_script_layout.dll
-	cd freetype; make -f Win64.mk libft2; cd ..
+#	cd freetype; make -f Win64.mk libft2; cd ..
 	cd harfbuzz; make -f Win64.mk harfbuzz; cd ..
 	gcc -Wall -m64 -c -D_JNI_IMPLEMENTATION_ -Wl,--kill-at $(LOCAL_C_INCLUDES) android/log.c complex_script_layout.c
-	g++ -static -m64 -Wl,-subsystem,windows -shared -o complex_script_layout64.dll freetype/*.o harfbuzz/*.o log.o complex_script_layout.o
+	g++ -static -m64 -Wl,-subsystem,windows -shared -o complex_script_layout64.dll harfbuzz/*.o log.o complex_script_layout.o
 	zip complex_script_layout.jar complex_script_layout64.dll
 
 test: complex_script_layout_test.c
@@ -26,6 +26,6 @@ test: complex_script_layout_test.c
 	g++ -m64 -o test.out freetype/*.o harfbuzz/*.o log.o complex_script_layout_test.o
 
 clean:
-	cd freetype; make -f Win64.mk clean; cd ..
+#	cd freetype; make -f Win64.mk clean; cd ..
 	cd harfbuzz; make -f Win64.mk clean; cd ..
 	-rm *.o

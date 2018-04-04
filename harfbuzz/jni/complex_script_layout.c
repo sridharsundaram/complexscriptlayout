@@ -14,13 +14,16 @@
 static hb_font_t **font = NULL;
 static char fontFilePaths[MAX_FONTS][1000];
 static hb_script_t script;
-static FT_Library ft_library;
+static JNIEnv* jenv;
+static jobject jobj;
 
 /**
  * initialize freetype library and fontface and language
  */
-JNIEXPORT void JNICALL Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniInitialize(
-    JNIEnv* env, jobject thiz, jstring jFontFilePath, jstring jLanguage) {
+JNIEXPORT void JNICALL Java_com_badlogic_gdx_graphics_g2d_freetype_ComplexScriptLayout_jniInitialize(
+    JNIEnv* env, jobject thiz, jlong face, jstring jFontFilePath, jstring jLanguage) {
+    jenv = env;
+    jobj = thiz;
 
     static FT_Face ft_face;
     FT_Error error;
@@ -34,11 +37,6 @@ JNIEXPORT void JNICALL Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScript
     languageLen = (*env)->GetStringLength(env, jLanguage);
 
     if (font == NULL) {
-    	error = FT_Init_FreeType(&ft_library); /* initialize library */
-		if (error) {
-		  __android_log_print(ANDROID_LOG_ERROR, "jniInitialize", "Error initializing FreeType library\n");
-		  return;
-		}
 		font = (hb_font_t **)malloc(sizeof(hb_font_t *) * MAX_FONTS);
 		for (i = 0; i < MAX_FONTS; i++) {
 		  font[i] = NULL;
@@ -61,15 +59,7 @@ JNIEXPORT void JNICALL Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScript
     __android_log_print(LOG_LEVEL, "jniInitialize", "Successfully initialized FreeType library\n");
     __android_log_print(LOG_LEVEL, "jniInitialize", "fontFilePath - %s\n", fontFilePath);
 
-    error = FT_New_Face(ft_library, fontFilePath, 0, &ft_face); /* create face object */
-    if (error == FT_Err_Unknown_File_Format) {
-      __android_log_print(ANDROID_LOG_ERROR, "jniInitialize", "Font format is not supported\n");
-      return;
-    } else if (error) {
-      __android_log_print(ANDROID_LOG_ERROR, "jniInitialize", "Font file not accessible");
-      return;
-    }
-
+    ft_face = (FT_Face) face;
     font[i] = hb_ft_font_create(ft_face, NULL);
     __android_log_print(LOG_LEVEL, "jniInitialize", "Successfully created font-face object\n");
 
@@ -89,17 +79,18 @@ JNIEXPORT void JNICALL Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScript
 //    FT_Done_FreeType(ft_library);
 
 }
-
 /**
  * @return array of glyphs corresponding to unicode text
  */
-JNIEXPORT jintArray JNICALL Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexScriptLayout_jniGetGlyphsForText(
+JNIEXPORT jintArray JNICALL Java_com_badlogic_gdx_graphics_g2d_freetype_ComplexScriptLayout_jniGetGlyphsForText(
     JNIEnv* env, jobject thiz, jstring jFontFilePath, jstring jUnicodeText) {
+
+	jenv = env;
+	jobj = thiz;
 
     hb_buffer_t *buffer;
     int glyph_count;
     hb_glyph_info_t *glyph_info;
-    hb_glyph_position_t *glyph_pos;
     jintArray glyphs = NULL;
     int localArrayCopy[1];
     const char* fontFilePath;
@@ -140,7 +131,6 @@ JNIEXPORT jintArray JNICALL Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexS
 
     glyph_count = hb_buffer_get_length(buffer);
     glyph_info = hb_buffer_get_glyph_infos(buffer, 0);
-    glyph_pos = hb_buffer_get_glyph_positions(buffer, 0);
 
     glyphs = (jintArray)(*env)->NewIntArray(env, glyph_count);
     for (i = 0; i < glyph_count; i++) {
@@ -159,3 +149,62 @@ JNIEXPORT jintArray JNICALL Java_com_badlogic_gdx_graphics_g2d_harfbuzz_ComplexS
     //(*env)->DeleteLocalRef(env, glyphs);
     return glyphs;
 }
+
+FT_Error FT_Load_Glyph (FT_Face ft_face, FT_UInt glyph_index, FT_Int32 load_flags) {
+    jclass class = (*jenv)->GetObjectClass(jenv, jobj);
+
+    if (class != NULL) {
+
+        jmethodID loadGlyph = (*jenv)->GetMethodID(jenv, class, "loadGlyph", "(II)Z");
+        if (loadGlyph == NULL) {
+            __android_log_print(LOG_LEVEL, "getGlyphsForText", "\nCould not find method loadGlyph\n");
+            return 0;
+        }
+        return (*jenv)->CallBooleanMethod(jenv, jobj, loadGlyph, glyph_index, load_flags);
+    }
+    return 0;
+};
+
+FT_UInt FT_Get_Char_Index(FT_Face ft_face, FT_ULong unicode) {
+    jclass class = (*jenv)->GetObjectClass(jenv, jobj);
+
+    if (class != NULL) {
+
+        jmethodID getCharIndex = (*jenv)->GetMethodID(jenv, class, "getCharIndex", "(I)I");
+        if (getCharIndex == NULL) {
+            __android_log_print(LOG_LEVEL, "getGlyphsForText", "\nCould not find method getCharIndex\n");
+            return 0;
+        }
+        return (*jenv)->CallIntMethod(jenv, jobj, getCharIndex, unicode);
+    }
+    return 0;
+};
+
+void FT_Get_Advance(FT_Face ft_face, FT_UInt glyph_index, FT_Int32 load_flags, FT_Fixed *padvance) {
+    jclass class = (*jenv)->GetObjectClass(jenv, jobj);
+
+    if (class != NULL) {
+
+        jmethodID getAdvance = (*jenv)->GetMethodID(jenv, class, "getAdvance", "(II)I");
+        if (getAdvance == NULL) {
+            __android_log_print(LOG_LEVEL, "getGlyphsForText", "\nCould not find method getAdvance\n");
+            return;
+        }
+        *padvance = (*jenv)->CallIntMethod(jenv, jobj, getAdvance, glyph_index, load_flags);
+    }
+    return;
+}
+
+// Dummy stubs - never used for our purposes
+
+void FT_Load_Sfnt_Table() {}
+FT_UInt FT_Get_Name_Index(FT_Face face, FT_String*  glyph_name) { return 0;}
+FT_Error FT_Get_Glyph_Name(FT_Face face, FT_UInt glyph_index, FT_Pointer buffer, FT_UInt buffer_max) {return 0;}
+FT_Error FT_Get_Kerning(FT_Face face, FT_UInt left_glyph, FT_UInt right_glyph, FT_UInt kern_mode, FT_Vector *akerning) {return 0;}
+FT_Error FT_New_Memory_Face(FT_Library library, const FT_Byte* file_base, FT_Long file_size, FT_Long face_index, FT_Face *aface) {return 0;}
+FT_Error FT_Select_Charmap(FT_Face face, FT_Encoding encoding) {return 0;}
+FT_Error FT_Set_Char_Size(FT_Face face, FT_F26Dot6 char_width, FT_F26Dot6 char_height, FT_UInt horz_resolution, FT_UInt vert_resolution) {return 0;}
+FT_Error FT_Done_Face(FT_Face face) {return 0;}
+FT_Error FT_Init_FreeType(FT_Library *alibrary) {return 0;}
+FT_Error FT_Done_FreeType(FT_Library library) {return 0;}
+
