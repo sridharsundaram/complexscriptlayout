@@ -12,6 +12,7 @@
 #define LOG_LEVEL ANDROID_LOG_WARN
 #define MAX_FONTS 5
 static hb_font_t **font = NULL;
+static hb_direction_t *direction = NULL;
 static char fontFilePaths[MAX_FONTS][1000];
 static hb_script_t script;
 static JNIEnv* jenv;
@@ -43,6 +44,7 @@ JNIEXPORT void JNICALL Java_com_badlogic_gdx_graphics_g2d_freetype_ComplexScript
 		  fontFilePaths[i][0] = '\0';
 		}
 		i = 0;
+		direction = (hb_direction_t *) malloc(sizeof(hb_direction_t) * MAX_FONTS);
     } else {
     	for (i = 0; i < MAX_FONTS; i++) {
     		if (strlen(fontFilePaths[i]) == 0 || !strcmp(fontFilePaths[i], fontFilePath)) break;
@@ -61,6 +63,8 @@ JNIEXPORT void JNICALL Java_com_badlogic_gdx_graphics_g2d_freetype_ComplexScript
 
     ft_face = (FT_Face) face;
     font[i] = hb_ft_font_create(ft_face, NULL);
+    direction[i] = !stricmp("Arab", language) ? HB_DIRECTION_RTL : HB_DIRECTION_LTR;
+    __android_log_print(LOG_LEVEL, "jniInitialize", "language = %s direction = %d\n", language, direction[i]);
     __android_log_print(LOG_LEVEL, "jniInitialize", "Successfully created font-face object\n");
 
     //hb_buffer_set_unicode_funcs(buffer, hb_icu_get_unicode_funcs());
@@ -118,6 +122,7 @@ JNIEXPORT jintArray JNICALL Java_com_badlogic_gdx_graphics_g2d_freetype_ComplexS
     /* Create a buffer for harfbuzz to use */
     buffer = hb_buffer_create();
     hb_buffer_set_script(buffer, script);
+    hb_buffer_set_direction(buffer, direction[fontIdx]);
 
     /* Layout the text */
     __android_log_print(LOG_LEVEL, "getGlyphsForText", "Text being shaped = %s\n", text);
