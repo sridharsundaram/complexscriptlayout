@@ -63,7 +63,7 @@ JNIEXPORT void JNICALL Java_com_badlogic_gdx_graphics_g2d_freetype_ComplexScript
 
     ft_face = (FT_Face) face;
     font[i] = hb_ft_font_create(ft_face, NULL);
-    direction[i] = !stricmp("Arab", language) ? HB_DIRECTION_RTL : HB_DIRECTION_LTR;
+    direction[i] = !strcmp("Arab", language) ? HB_DIRECTION_RTL : HB_DIRECTION_LTR;
     __android_log_print(LOG_LEVEL, "jniInitialize", "language = %s direction = %d\n", language, direction[i]);
     __android_log_print(LOG_LEVEL, "jniInitialize", "Successfully created font-face object\n");
 
@@ -155,6 +155,7 @@ JNIEXPORT jintArray JNICALL Java_com_badlogic_gdx_graphics_g2d_freetype_ComplexS
     return glyphs;
 }
 
+#ifndef IOS
 FT_Error FT_Load_Glyph (FT_Face ft_face, FT_UInt glyph_index, FT_Int32 load_flags) {
     jclass class = (*jenv)->GetObjectClass(jenv, jobj);
 
@@ -213,3 +214,4 @@ FT_Error FT_Done_Face(FT_Face face) {return 0;}
 FT_Error FT_Init_FreeType(FT_Library *alibrary) {return 0;}
 FT_Error FT_Done_FreeType(FT_Library library) {return 0;}
 
+#endif

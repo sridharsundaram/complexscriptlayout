@@ -10,7 +10,7 @@ LOCAL_C_INCLUDES = \
 	-I"$(LOCAL_PATH)"
 COMPILER:=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -ferror-limit=1000 -arch $(ARCH)
 LINKER:=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
-LOCAL_CFLAGS:=-Wall -c -fno-exceptions -D_JNI_IMPLEMENTATION_ -Wl,--kill-at 
+LOCAL_CFLAGS:=-Wall -c -fno-exceptions -D_JNI_IMPLEMENTATION_ -DIOS -Wl,--kill-at 
 
 complex_script_layout: complex_script_layout.c
 	@rm -f complex_script_layout.dll
@@ -19,7 +19,7 @@ complex_script_layout: complex_script_layout.c
 	$(COMPILER) $(LOCAL_CFLAGS) $(LOCAL_C_INCLUDES) -isysroot $(PLATFORM) complex_script_layout.c
 	libtool -static -o libcomplex_script_layout$(ARCH).a harfbuzz/*.o *.o
 #	$(LINKER) -rcs libcomplex_script_layout.a freetype/*.o harfbuzz/*.o *.o
-#	$(COMPILER) -Wall -D_JNI_IMPLEMENTATION_ -Wl -v -isysroot $(PLATFORM) -o libcomplex_script_layout.a freetype/*.o harfbuzz/*.o complex_script_layout.o
+#	$(COMPILER) -Wall -D_JNI_IMPLEMENTATION_ -DIOS -Wl -v -isysroot $(PLATFORM) -o libcomplex_script_layout.a freetype/*.o harfbuzz/*.o complex_script_layout.o
 
 clean:
 	cd freetype; make -f Win64.mk clean; cd ..
